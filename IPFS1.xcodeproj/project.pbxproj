@@ -66,6 +66,7 @@
 		AAEDA779204D36CB0020611B /* SwiftIpfsApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftIpfsApi.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftIpfsApi.framework"; sourceTree = "<group>"; };
 		AAEDA77A204D36CB0020611B /* VarInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VarInt.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/VarInt.framework"; sourceTree = "<group>"; };
 		AAEDA788204D394B0020611B /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		AAEDB1C7204D47FE0020611B /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +100,9 @@
 		AAEDA750204D1EB40020611B /* IPFS1 */ = {
 			isa = PBXGroup;
 			children = (
-				AAEDA751204D1EB40020611B /* AppDelegate.swift */,
+				AAEDB1C7204D47FE0020611B /* Notes.txt */,
 				AAEDA772204D34B00020611B /* 3rd Party */,
+				AAEDB1C9204D480F0020611B /* App */,
 				AAEDA768204D26F00020611B /* Controllers */,
 				AAEDA76B204D2FA10020611B /* Extensions */,
 				AAEDA763204D1F450020611B /* Resources */,
@@ -174,6 +176,14 @@
 				AAEDA77A204D36CB0020611B /* VarInt.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AAEDB1C9204D480F0020611B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDA751204D1EB40020611B /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
