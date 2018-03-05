@@ -1,0 +1,893 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA751204D1EB40020611B /* AppDelegate.swift */; };
+		AAEDA757204D1EB40020611B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA755204D1EB40020611B /* Main.storyboard */; };
+		AAEDA759204D1EB40020611B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA758204D1EB40020611B /* Assets.xcassets */; };
+		AAEDA75C204D1EB40020611B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA75A204D1EB40020611B /* LaunchScreen.storyboard */; };
+		AAEDA767204D26E60020611B /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA766204D26E60020611B /* UsersViewController.swift */; };
+		AAEDA76A204D2CEE0020611B /* UserDefaults_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA769204D2CEE0020611B /* UserDefaults_Utils.swift */; };
+		AAEDA76D204D2FB10020611B /* NSObject_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA76C204D2FB10020611B /* NSObject_Utils.swift */; };
+		AAEDA76F204D2FD30020611B /* String_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA76E204D2FD30020611B /* String_Utils.swift */; };
+		AAEDA771204D34A20020611B /* cartfile in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA770204D34A20020611B /* cartfile */; };
+		AAEDAD59204D394C0020611B /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA788204D394B0020611B /* Cartfile.resolved */; };
+		AAEDB1BA204D3B150020611B /* SwiftBase58.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA774204D36CB0020611B /* SwiftBase58.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAEDB1BC204D3B150020611B /* SwiftGMP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA776204D36CB0020611B /* SwiftGMP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAEDB1BE204D3B150020611B /* SwiftHex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA777204D36CB0020611B /* SwiftHex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAEDB1C0204D3B150020611B /* SwiftIpfsApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA779204D36CB0020611B /* SwiftIpfsApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAEDB1C2204D3B150020611B /* SwiftMultiaddr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA778204D36CB0020611B /* SwiftMultiaddr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAEDB1C4204D3B150020611B /* SwiftMultihash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA775204D36CB0020611B /* SwiftMultihash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAEDB1C6204D3B160020611B /* VarInt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA77A204D36CB0020611B /* VarInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AAEDB1B1204D3ACE0020611B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AAEDB1BA204D3B150020611B /* SwiftBase58.framework in Embed Frameworks */,
+				AAEDB1C2204D3B150020611B /* SwiftMultiaddr.framework in Embed Frameworks */,
+				AAEDB1C6204D3B160020611B /* VarInt.framework in Embed Frameworks */,
+				AAEDB1C4204D3B150020611B /* SwiftMultihash.framework in Embed Frameworks */,
+				AAEDB1BC204D3B150020611B /* SwiftGMP.framework in Embed Frameworks */,
+				AAEDB1BE204D3B150020611B /* SwiftHex.framework in Embed Frameworks */,
+				AAEDB1C0204D3B150020611B /* SwiftIpfsApi.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AAEDA74E204D1EB40020611B /* IPFS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAEDA751204D1EB40020611B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AAEDA756204D1EB40020611B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AAEDA758204D1EB40020611B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAEDA75B204D1EB40020611B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AAEDA75D204D1EB40020611B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAEDA766204D26E60020611B /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		AAEDA769204D2CEE0020611B /* UserDefaults_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults_Utils.swift; sourceTree = "<group>"; };
+		AAEDA76C204D2FB10020611B /* NSObject_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject_Utils.swift; sourceTree = "<group>"; };
+		AAEDA76E204D2FD30020611B /* String_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Utils.swift; sourceTree = "<group>"; };
+		AAEDA770204D34A20020611B /* cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = cartfile; sourceTree = "<group>"; };
+		AAEDA774204D36CB0020611B /* SwiftBase58.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftBase58.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftBase58.framework"; sourceTree = "<group>"; };
+		AAEDA775204D36CB0020611B /* SwiftMultihash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMultihash.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftMultihash.framework"; sourceTree = "<group>"; };
+		AAEDA776204D36CB0020611B /* SwiftGMP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGMP.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftGMP.framework"; sourceTree = "<group>"; };
+		AAEDA777204D36CB0020611B /* SwiftHex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHex.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftHex.framework"; sourceTree = "<group>"; };
+		AAEDA778204D36CB0020611B /* SwiftMultiaddr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMultiaddr.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftMultiaddr.framework"; sourceTree = "<group>"; };
+		AAEDA779204D36CB0020611B /* SwiftIpfsApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftIpfsApi.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftIpfsApi.framework"; sourceTree = "<group>"; };
+		AAEDA77A204D36CB0020611B /* VarInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VarInt.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/VarInt.framework"; sourceTree = "<group>"; };
+		AAEDA788204D394B0020611B /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAEDA74B204D1EB40020611B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAEDA745204D1EB40020611B = {
+			isa = PBXGroup;
+			children = (
+				AAEDA750204D1EB40020611B /* IPFS1 */,
+				AAEDA74F204D1EB40020611B /* Products */,
+				AAEDA773204D36CB0020611B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AAEDA74F204D1EB40020611B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDA74E204D1EB40020611B /* IPFS1.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAEDA750204D1EB40020611B /* IPFS1 */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDA751204D1EB40020611B /* AppDelegate.swift */,
+				AAEDA772204D34B00020611B /* 3rd Party */,
+				AAEDA768204D26F00020611B /* Controllers */,
+				AAEDA76B204D2FA10020611B /* Extensions */,
+				AAEDA763204D1F450020611B /* Resources */,
+			);
+			path = IPFS1;
+			sourceTree = "<group>";
+		};
+		AAEDA763204D1F450020611B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDA764204D1F830020611B /* Assets */,
+				AAEDA765204D1F8E0020611B /* Displays */,
+				AAEDA75D204D1EB40020611B /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AAEDA764204D1F830020611B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDA758204D1EB40020611B /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		AAEDA765204D1F8E0020611B /* Displays */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDA755204D1EB40020611B /* Main.storyboard */,
+				AAEDA75A204D1EB40020611B /* LaunchScreen.storyboard */,
+			);
+			path = Displays;
+			sourceTree = "<group>";
+		};
+		AAEDA768204D26F00020611B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDA766204D26E60020611B /* UsersViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AAEDA76B204D2FA10020611B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDA76C204D2FB10020611B /* NSObject_Utils.swift */,
+				AAEDA76E204D2FD30020611B /* String_Utils.swift */,
+				AAEDA769204D2CEE0020611B /* UserDefaults_Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AAEDA772204D34B00020611B /* 3rd Party */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDA770204D34A20020611B /* cartfile */,
+				AAEDA788204D394B0020611B /* Cartfile.resolved */,
+			);
+			path = "3rd Party";
+			sourceTree = "<group>";
+		};
+		AAEDA773204D36CB0020611B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDA774204D36CB0020611B /* SwiftBase58.framework */,
+				AAEDA776204D36CB0020611B /* SwiftGMP.framework */,
+				AAEDA777204D36CB0020611B /* SwiftHex.framework */,
+				AAEDA779204D36CB0020611B /* SwiftIpfsApi.framework */,
+				AAEDA778204D36CB0020611B /* SwiftMultiaddr.framework */,
+				AAEDA775204D36CB0020611B /* SwiftMultihash.framework */,
+				AAEDA77A204D36CB0020611B /* VarInt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAEDA74D204D1EB40020611B /* IPFS1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAEDA760204D1EB40020611B /* Build configuration list for PBXNativeTarget "IPFS1" */;
+			buildPhases = (
+				AAEDA74A204D1EB40020611B /* Sources */,
+				AAEDA74B204D1EB40020611B /* Frameworks */,
+				AAEDA74C204D1EB40020611B /* Resources */,
+				AAEDB1B1204D3ACE0020611B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IPFS1;
+			productName = IPFS1;
+			productReference = AAEDA74E204D1EB40020611B /* IPFS1.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAEDA746204D1EB40020611B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Cemico;
+				TargetAttributes = {
+					AAEDA74D204D1EB40020611B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = AAEDA749204D1EB40020611B /* Build configuration list for PBXProject "IPFS1" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAEDA745204D1EB40020611B;
+			productRefGroup = AAEDA74F204D1EB40020611B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAEDA74D204D1EB40020611B /* IPFS1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAEDA74C204D1EB40020611B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAEDA75C204D1EB40020611B /* LaunchScreen.storyboard in Resources */,
+				AAEDA759204D1EB40020611B /* Assets.xcassets in Resources */,
+				AAEDA771204D34A20020611B /* cartfile in Resources */,
+				AAEDAD59204D394C0020611B /* Cartfile.resolved in Resources */,
+				AAEDA757204D1EB40020611B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAEDA74A204D1EB40020611B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */,
+				AAEDA76A204D2CEE0020611B /* UserDefaults_Utils.swift in Sources */,
+				AAEDA76F204D2FD30020611B /* String_Utils.swift in Sources */,
+				AAEDA767204D26E60020611B /* UsersViewController.swift in Sources */,
+				AAEDA76D204D2FB10020611B /* NSObject_Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AAEDA755204D1EB40020611B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAEDA756204D1EB40020611B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AAEDA75A204D1EB40020611B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AAEDA75B204D1EB40020611B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AAEDA75E204D1EB40020611B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAEDA75F204D1EB40020611B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAEDA761204D1EB40020611B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2D27P7B34F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = IPFS1/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphoneos",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphonesimulator",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/macosx",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphoneos",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphonesimulator",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/macosx",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/GMPLib/iphoneos",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/GMPLib/iphonesimulator",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/GMPLib/macosx",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphoneos",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphonesimulator",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/macosx",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphoneos",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphonesimulator",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/macosx",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cemico.IPFS1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAEDA762204D1EB40020611B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2D27P7B34F;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftHex/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = IPFS1/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphoneos",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphonesimulator",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/swift-ipfs-api/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/macosx",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphoneos",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphonesimulator",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/macosx",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/GMPLib/iphoneos",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/GMPLib/iphonesimulator",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftGMP/GMPLib/macosx",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphoneos",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphonesimulator",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultiaddr/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/macosx",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphoneos",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/iphonesimulator",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/SwiftMultihash/Carthage/Checkouts/SwiftBase58/Carthage/Checkouts/SwiftGMP/GMPLib/macosx",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cemico.IPFS1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAEDA749204D1EB40020611B /* Build configuration list for PBXProject "IPFS1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAEDA75E204D1EB40020611B /* Debug */,
+				AAEDA75F204D1EB40020611B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAEDA760204D1EB40020611B /* Build configuration list for PBXNativeTarget "IPFS1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAEDA761204D1EB40020611B /* Debug */,
+				AAEDA762204D1EB40020611B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AAEDA746204D1EB40020611B /* Project object */;
+}
