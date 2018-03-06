@@ -6,5 +6,5 @@ Install Carthage
 
 Update Carthage Dependencies
   > cd <installdir>/IPFS1/3rd\ Party
-  > carthage update
+  > carthage update --platform iOS
 

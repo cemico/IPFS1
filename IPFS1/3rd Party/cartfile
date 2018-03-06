@@ -1,2 +1,9 @@
 
+# crypto items
 github "ipfs/swift-ipfs-api" "master"
+
+# logging
+github "CocoaLumberjack/CocoaLumberjack"
+
+# networking
+github "Alamofire/Alamofire" ~> 4.7

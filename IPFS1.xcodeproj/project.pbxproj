@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA9133D6204E72DA006B5101 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = AA9133D5204E72DA006B5101 /* ReadMe.md */; };
+		AA9133DB204E82F1006B5101 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9133DA204E82F1006B5101 /* Router.swift */; };
 		AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA751204D1EB40020611B /* AppDelegate.swift */; };
 		AAEDA757204D1EB40020611B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA755204D1EB40020611B /* Main.storyboard */; };
 		AAEDA759204D1EB40020611B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA758204D1EB40020611B /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		AA9133D5204E72DA006B5101 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		AA9133DA204E82F1006B5101 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AAEDA74E204D1EB40020611B /* IPFS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEDA751204D1EB40020611B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAEDA756204D1EB40020611B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				AAEDB1C9204D480F0020611B /* App */,
 				AAEDA768204D26F00020611B /* Controllers */,
 				AAEDA76B204D2FA10020611B /* Extensions */,
+				AA9133DC204E8347006B5101 /* Network */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -99,6 +102,14 @@
 				AA9133D5204E72DA006B5101 /* ReadMe.md */,
 			);
 			path = _Info;
+			sourceTree = "<group>";
+		};
+		AA9133DC204E8347006B5101 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AA9133DA204E82F1006B5101 /* Router.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		AAEDA745204D1EB40020611B = {
@@ -285,6 +296,7 @@
 				AAEDA76A204D2CEE0020611B /* UserDefaults_Utils.swift in Sources */,
 				AAEDA76F204D2FD30020611B /* String_Utils.swift in Sources */,
 				AAEDA767204D26E60020611B /* UsersViewController.swift in Sources */,
+				AA9133DB204E82F1006B5101 /* Router.swift in Sources */,
 				AAEDA76D204D2FB10020611B /* NSObject_Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
