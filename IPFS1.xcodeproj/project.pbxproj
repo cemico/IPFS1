@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA9133D6204E72DA006B5101 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = AA9133D5204E72DA006B5101 /* ReadMe.md */; };
 		AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA751204D1EB40020611B /* AppDelegate.swift */; };
 		AAEDA757204D1EB40020611B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA755204D1EB40020611B /* Main.storyboard */; };
 		AAEDA759204D1EB40020611B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA758204D1EB40020611B /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA9133D5204E72DA006B5101 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		AAEDA74E204D1EB40020611B /* IPFS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEDA751204D1EB40020611B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAEDA756204D1EB40020611B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA9133D8204E745A006B5101 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDB1C9204D480F0020611B /* App */,
+				AAEDA768204D26F00020611B /* Controllers */,
+				AAEDA76B204D2FA10020611B /* Extensions */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		AA9133D9204E746F006B5101 /* _Info */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDB1C7204D47FE0020611B /* Notes.txt */,
+				AA9133D5204E72DA006B5101 /* ReadMe.md */,
+			);
+			path = _Info;
+			sourceTree = "<group>";
+		};
 		AAEDA745204D1EB40020611B = {
 			isa = PBXGroup;
 			children = (
@@ -100,12 +121,10 @@
 		AAEDA750204D1EB40020611B /* IPFS1 */ = {
 			isa = PBXGroup;
 			children = (
-				AAEDB1C7204D47FE0020611B /* Notes.txt */,
+				AA9133D9204E746F006B5101 /* _Info */,
 				AAEDA772204D34B00020611B /* 3rd Party */,
-				AAEDB1C9204D480F0020611B /* App */,
-				AAEDA768204D26F00020611B /* Controllers */,
-				AAEDA76B204D2FA10020611B /* Extensions */,
 				AAEDA763204D1F450020611B /* Resources */,
+				AA9133D8204E745A006B5101 /* Source */,
 			);
 			path = IPFS1;
 			sourceTree = "<group>";
@@ -246,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9133D6204E72DA006B5101 /* ReadMe.md in Resources */,
 				AAEDA75C204D1EB40020611B /* LaunchScreen.storyboard in Resources */,
 				AAEDA759204D1EB40020611B /* Assets.xcassets in Resources */,
 				AAEDA771204D34A20020611B /* cartfile in Resources */,
