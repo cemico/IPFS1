@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA84016F205608D000C76B35 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA84016E205608D000C76B35 /* Router.swift */; };
+		AA84018F205616D300C76B35 /* Alamofire.framework in Copy Files - Frameworks */ = {isa = PBXBuildFile; fileRef = AA84018E205616D200C76B35 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA840190205616F800C76B35 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA84018E205616D200C76B35 /* Alamofire.framework */; };
 		AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA751204D1EB40020611B /* AppDelegate.swift */; };
 		AAEDA757204D1EB40020611B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA755204D1EB40020611B /* Main.storyboard */; };
 		AAEDA759204D1EB40020611B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA758204D1EB40020611B /* Assets.xcassets */; };
@@ -24,9 +27,33 @@
 		AAEDB1C2204D3B150020611B /* SwiftMultiaddr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA778204D36CB0020611B /* SwiftMultiaddr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AAEDB1C4204D3B150020611B /* SwiftMultihash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA775204D36CB0020611B /* SwiftMultihash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AAEDB1C6204D3B160020611B /* VarInt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA77A204D36CB0020611B /* VarInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AAEDB1CB2055E3550020611B /* NSLock_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1CA2055E3550020611B /* NSLock_Utils.swift */; };
+		AAEDB1CD2055E3B90020611B /* ProcessInfo_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1CC2055E3B80020611B /* ProcessInfo_Utils.swift */; };
+		AAEDB1CF2055E4E70020611B /* CustomStringConvertible_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1CE2055E4E70020611B /* CustomStringConvertible_Utils.swift */; };
+		AAEDB1D12055E5150020611B /* QualityOfService_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1D02055E5150020611B /* QualityOfService_Utils.swift */; };
+		AAEDB1D32055EBF60020611B /* NotificationCenter_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1D22055EBF60020611B /* NotificationCenter_Utils.swift */; };
+		AAEDB1D52055EC0C0020611B /* NotificationName_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1D42055EC0C0020611B /* NotificationName_Utils.swift */; };
+		AAEDB1D72055ED430020611B /* UIView_TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1D62055ED430020611B /* UIView_TapGesture.swift */; };
+		AAEDB1D92055EDCD0020611B /* UIViewController_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1D82055EDCD0020611B /* UIViewController_Utils.swift */; };
+		AAEDB1DB2055EE630020611B /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1DA2055EE630020611B /* Globals.swift */; };
+		AAEDB1DD2055EF0C0020611B /* URLSession_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1DC2055EF0C0020611B /* URLSession_Utils.swift */; };
+		AAEDB1DF2055EFE00020611B /* HapticMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1DE2055EFE00020611B /* HapticMgr.swift */; };
+		AAEDB1E22055F0560020611B /* QueueMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1E12055F0560020611B /* QueueMgr.swift */; };
+		AAEDB1E42055FB720020611B /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDB1E32055FB720020611B /* Runtime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		AA84018D205616B200C76B35 /* Copy Files - Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AA84018F205616D300C76B35 /* Alamofire.framework in Copy Files - Frameworks */,
+			);
+			name = "Copy Files - Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AAEDB1B1204D3ACE0020611B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,6 +74,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA84016E205608D000C76B35 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AA84018E205616D200C76B35 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/Alamofire.framework"; sourceTree = "<group>"; };
 		AAEDA74E204D1EB40020611B /* IPFS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEDA751204D1EB40020611B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAEDA756204D1EB40020611B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,6 +96,19 @@
 		AAEDA77A204D36CB0020611B /* VarInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VarInt.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/VarInt.framework"; sourceTree = "<group>"; };
 		AAEDA788204D394B0020611B /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		AAEDB1C7204D47FE0020611B /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
+		AAEDB1CA2055E3550020611B /* NSLock_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLock_Utils.swift; sourceTree = "<group>"; };
+		AAEDB1CC2055E3B80020611B /* ProcessInfo_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessInfo_Utils.swift; sourceTree = "<group>"; };
+		AAEDB1CE2055E4E70020611B /* CustomStringConvertible_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStringConvertible_Utils.swift; sourceTree = "<group>"; };
+		AAEDB1D02055E5150020611B /* QualityOfService_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualityOfService_Utils.swift; sourceTree = "<group>"; };
+		AAEDB1D22055EBF60020611B /* NotificationCenter_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter_Utils.swift; sourceTree = "<group>"; };
+		AAEDB1D42055EC0C0020611B /* NotificationName_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName_Utils.swift; sourceTree = "<group>"; };
+		AAEDB1D62055ED430020611B /* UIView_TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView_TapGesture.swift; sourceTree = "<group>"; };
+		AAEDB1D82055EDCD0020611B /* UIViewController_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Utils.swift; sourceTree = "<group>"; };
+		AAEDB1DA2055EE630020611B /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		AAEDB1DC2055EF0C0020611B /* URLSession_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession_Utils.swift; sourceTree = "<group>"; };
+		AAEDB1DE2055EFE00020611B /* HapticMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticMgr.swift; sourceTree = "<group>"; };
+		AAEDB1E12055F0560020611B /* QueueMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueMgr.swift; sourceTree = "<group>"; };
+		AAEDB1E32055FB720020611B /* Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,12 +116,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA840190205616F800C76B35 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA840170205608D400C76B35 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AA84016E205608D000C76B35 /* Router.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		AAEDA745204D1EB40020611B = {
 			isa = PBXGroup;
 			children = (
@@ -102,10 +153,8 @@
 			children = (
 				AAEDB1C7204D47FE0020611B /* Notes.txt */,
 				AAEDA772204D34B00020611B /* 3rd Party */,
-				AAEDB1C9204D480F0020611B /* App */,
-				AAEDA768204D26F00020611B /* Controllers */,
-				AAEDA76B204D2FA10020611B /* Extensions */,
 				AAEDA763204D1F450020611B /* Resources */,
+				AAEDB1E5205608430020611B /* Source */,
 			);
 			path = IPFS1;
 			sourceTree = "<group>";
@@ -148,9 +197,18 @@
 		AAEDA76B204D2FA10020611B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AAEDB1CE2055E4E70020611B /* CustomStringConvertible_Utils.swift */,
+				AAEDB1D22055EBF60020611B /* NotificationCenter_Utils.swift */,
+				AAEDB1D42055EC0C0020611B /* NotificationName_Utils.swift */,
+				AAEDB1CA2055E3550020611B /* NSLock_Utils.swift */,
 				AAEDA76C204D2FB10020611B /* NSObject_Utils.swift */,
+				AAEDB1CC2055E3B80020611B /* ProcessInfo_Utils.swift */,
+				AAEDB1D02055E5150020611B /* QualityOfService_Utils.swift */,
 				AAEDA76E204D2FD30020611B /* String_Utils.swift */,
+				AAEDB1D62055ED430020611B /* UIView_TapGesture.swift */,
+				AAEDB1D82055EDCD0020611B /* UIViewController_Utils.swift */,
 				AAEDA769204D2CEE0020611B /* UserDefaults_Utils.swift */,
+				AAEDB1DC2055EF0C0020611B /* URLSession_Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,6 +225,7 @@
 		AAEDA773204D36CB0020611B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AA84018E205616D200C76B35 /* Alamofire.framework */,
 				AAEDA774204D36CB0020611B /* SwiftBase58.framework */,
 				AAEDA776204D36CB0020611B /* SwiftGMP.framework */,
 				AAEDA777204D36CB0020611B /* SwiftHex.framework */,
@@ -182,8 +241,31 @@
 			isa = PBXGroup;
 			children = (
 				AAEDA751204D1EB40020611B /* AppDelegate.swift */,
+				AAEDB1DA2055EE630020611B /* Globals.swift */,
+				AAEDB1E32055FB720020611B /* Runtime.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		AAEDB1E02055EFE90020611B /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDB1DE2055EFE00020611B /* HapticMgr.swift */,
+				AAEDB1E12055F0560020611B /* QueueMgr.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		AAEDB1E5205608430020611B /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDB1C9204D480F0020611B /* App */,
+				AAEDA768204D26F00020611B /* Controllers */,
+				AAEDA76B204D2FA10020611B /* Extensions */,
+				AA840170205608D400C76B35 /* Network */,
+				AAEDB1E02055EFE90020611B /* Singletons */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +279,8 @@
 				AAEDA74B204D1EB40020611B /* Frameworks */,
 				AAEDA74C204D1EB40020611B /* Resources */,
 				AAEDB1B1204D3ACE0020611B /* Embed Frameworks */,
+				AA8401832056138E00C76B35 /* Run Script - Carthage */,
+				AA84018D205616B200C76B35 /* Copy Files - Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,15 +330,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAEDA75C204D1EB40020611B /* LaunchScreen.storyboard in Resources */,
 				AAEDA759204D1EB40020611B /* Assets.xcassets in Resources */,
 				AAEDA771204D34A20020611B /* cartfile in Resources */,
 				AAEDAD59204D394C0020611B /* Cartfile.resolved in Resources */,
+				AAEDA75C204D1EB40020611B /* LaunchScreen.storyboard in Resources */,
 				AAEDA757204D1EB40020611B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AA8401832056138E00C76B35 /* Run Script - Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/IPFS1/3rd Party/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = "Run Script - Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AAEDA74A204D1EB40020611B /* Sources */ = {
@@ -262,10 +364,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */,
-				AAEDA76A204D2CEE0020611B /* UserDefaults_Utils.swift in Sources */,
-				AAEDA76F204D2FD30020611B /* String_Utils.swift in Sources */,
-				AAEDA767204D26E60020611B /* UsersViewController.swift in Sources */,
+				AAEDB1CF2055E4E70020611B /* CustomStringConvertible_Utils.swift in Sources */,
+				AAEDB1DB2055EE630020611B /* Globals.swift in Sources */,
+				AAEDB1DF2055EFE00020611B /* HapticMgr.swift in Sources */,
+				AAEDB1D32055EBF60020611B /* NotificationCenter_Utils.swift in Sources */,
+				AAEDB1D52055EC0C0020611B /* NotificationName_Utils.swift in Sources */,
+				AAEDB1CB2055E3550020611B /* NSLock_Utils.swift in Sources */,
 				AAEDA76D204D2FB10020611B /* NSObject_Utils.swift in Sources */,
+				AAEDB1CD2055E3B90020611B /* ProcessInfo_Utils.swift in Sources */,
+				AAEDB1D12055E5150020611B /* QualityOfService_Utils.swift in Sources */,
+				AAEDB1E22055F0560020611B /* QueueMgr.swift in Sources */,
+				AA84016F205608D000C76B35 /* Router.swift in Sources */,
+				AAEDB1E42055FB720020611B /* Runtime.swift in Sources */,
+				AAEDA76F204D2FD30020611B /* String_Utils.swift in Sources */,
+				AAEDB1D92055EDCD0020611B /* UIViewController_Utils.swift in Sources */,
+				AAEDB1D72055ED430020611B /* UIView_TapGesture.swift in Sources */,
+				AAEDB1DD2055EF0C0020611B /* URLSession_Utils.swift in Sources */,
+				AAEDA76A204D2CEE0020611B /* UserDefaults_Utils.swift in Sources */,
+				AAEDA767204D26E60020611B /* UsersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +725,18 @@
 					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = IPFS1/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -820,6 +948,18 @@
 					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Checkouts/VarInt/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
