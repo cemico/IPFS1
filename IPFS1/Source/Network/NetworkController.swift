@@ -24,7 +24,7 @@ class NetworkController {
 
             if let network = network {
 
-                printInfo("\(String(describing: type(of: network))) configured")
+                printInfo("\(String(describing: type(of: network))) configured\n   api: \(Router.baseURLString)\n   rtc: \(Router.baseRtcURLString)")
             }
         }
     }

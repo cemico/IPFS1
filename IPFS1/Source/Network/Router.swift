@@ -58,9 +58,10 @@ extension Router {
             static let currentRtc               = Api.rtcCName
             static let currentApi               = Api.apiCName
 
-            // hosts / domains
-            static let stagingHost              = "int." + companyDomain
-            static let devHost                  = "dev." + companyDomain
+            // hosts / domains - dev, int/staging, prod
+            static let intHost                  = "int." + companyDomain
+            static let devHost1                 = "dev." + companyDomain
+            static let devHost                  = "localhost:3000"
             static let prodHost                 = companyDomain
 
             // versions
@@ -69,26 +70,29 @@ extension Router {
             static let currentVersion           = Api.vNone
 
             // pulling it all together
-#if APP_DEV
+#if APP_SCHEME_DEV
 
-            // https://api.dev.cemico.com
+            // https://localhost:3000
+            // (1) https://api.dev.cemico.com
             static let currentHost              = Api.devHost
-            static let currentBase              = Api.currentScheme + Api.apiCName        + Api.currentHost
+            static let currentBase1             = Api.currentScheme + Api.apiCName        + Api.currentHost
+            static let currentBase              = Api.currentScheme                       + Api.currentHost
+            static let currentRtcBase           = Api.currentBase
 
-#elseif APP_STAGING
+#elseif APP_SCHEME_INT
 
             // https://api.int.cemico.com
-            static let currentHost              = Api.stagingHost
+            static let currentHost              = Api.intHost
             static let currentBase              = Api.currentScheme + Api.apiCName        + Api.currentHost
+            static let currentRtcBase           = Api.currentScheme + Api.currentRtc      + Api.currentHost + Api.currentVersion
 
-#else // APP_PROD
+#else // APP_SCHEME_PROD
 
             // https://api.cemico.com
             static let currentHost              = Api.prodHost
             static let currentBase              = Api.currentScheme + Api.currentApi      + Api.currentHost + Api.currentVersion
-#endif
-
             static let currentRtcBase           = Api.currentScheme + Api.currentRtc      + Api.currentHost + Api.currentVersion
+#endif
         }
 
         struct Endpoints {
