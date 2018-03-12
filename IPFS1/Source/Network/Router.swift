@@ -2,16 +2,11 @@
 //  Router.swift
 //  IPFS1
 //
-<<<<<<< HEAD
-//  Created by Dave Rogers on 3/11/18.
-=======
 //  Created by Dave Rogers on 3/6/18.
->>>>>>> 4f4328a04c5b0fc34a549f30ebbb03ba973200ca
 //  Copyright © 2018 Cemico. All rights reserved.
 //
 
 import Foundation
-<<<<<<< HEAD
 
 // used for encoding routines
 import Alamofire
@@ -530,5 +525,4 @@ extension Router: URLConvertible {
         throw RouterErrors.UnableToCreateURL
     }
 }
-=======
->>>>>>> 4f4328a04c5b0fc34a549f30ebbb03ba973200ca
+
