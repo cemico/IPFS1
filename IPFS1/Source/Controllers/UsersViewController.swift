@@ -10,7 +10,7 @@ import UIKit
 import SwiftIpfsApi
 import SwiftMultihash
 
-class UsersViewController: UIViewController {
+class UsersViewController: BaseViewController {
 
     ///////////////////////////////////////////////////////////
     // outlets
@@ -68,6 +68,18 @@ class UsersViewController: UIViewController {
     ///////////////////////////////////////////////////////////
 
     @IBAction func onAddUser(_ sender: UIBarButtonItem) {
+    }
+}
+
+///////////////////////////////////////////////////////////
+// Localize Protocol
+///////////////////////////////////////////////////////////
+
+extension UsersViewController: LocalizeProtocol {
+
+    func localize() {
+
+        // localize this screen
     }
 }
 

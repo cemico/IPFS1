@@ -316,6 +316,10 @@ extension Router: URLRequestConvertible {
 
         var encodedMutableURLRequest = mutableURLRequest
 
+        // sanity check that encoding parameters exist
+//        guard let parameters = parameters, parameters.count > 0 else { return mutableURLRequest }
+//        guard let urlOriginal = mutableURLRequest.url else { return mutableURLRequest }
+
         // encode requested data
         switch requestType {
 
@@ -324,6 +328,11 @@ extension Router: URLRequestConvertible {
 
             case .url:
                 encodedMutableURLRequest = try! Alamofire.URLEncoding.default.encode(mutableURLRequest, with: parameters)
+
+//                var urlComps = URLComponents(url: urlOriginal, resolvingAgainstBaseURL: false)
+//                let queryItems = parameters.map({ return URLQueryItem(name: "\($0.key)", value: "\($0.value)") })
+//                urlComps?.queryItems = queryItems
+//                encodedMutableURLRequest.url = urlComps?.url
 
             case .array:
 
