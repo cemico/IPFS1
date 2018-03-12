@@ -31,5 +31,19 @@ extension UserDefaults {
             self.synchronize()
         }
     }
+
+    var token: String {
+
+        get {
+
+            return self.string(forKey: #function) ?? ""
+        }
+
+        set {
+
+            self.set(newValue, forKey: #function)
+            self.synchronize()
+        }
+    }
 }
 

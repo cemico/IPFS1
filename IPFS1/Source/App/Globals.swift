@@ -18,13 +18,15 @@ var Concurrency = QueueMgr.shared
 var Feedback = HapticMgr.shared
 var Settings = UserDefaults.standard
 var Device = UIDevice.current
-// var Network = NetworkController.shared
+ var Network = NetworkController.shared
 
 ///////////////////////////////////////////////////////////
 // global scope
 ///////////////////////////////////////////////////////////
 
-let companyReverseDomain = "com.cemico."
+let companyReverseDomain        = "com.cemico."
+let companyDomain               = "cemico.com"
+let modelObjectVersionPrecision = 2
 
 func printOptional(_ string: String?, default: String = "nil") {
 

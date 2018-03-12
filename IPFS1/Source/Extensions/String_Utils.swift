@@ -18,5 +18,27 @@ extension String {
 
         return String(describing: type(of: ofSelf))
     }
+
+    static func from(any: Any, default value: String = "") -> String {
+
+        return any as? String ?? value
+    }
+
+    ///////////////////////////////////////////////////////////
+    // instance level
+    ///////////////////////////////////////////////////////////
+
+    var ext: String {
+
+        let nsSelf = self as NSString
+        return nsSelf.pathExtension
+    }
+
+    func stringByAppendingPathComponent(path: String) -> String {
+
+        let nsSelf = self as NSString
+        return nsSelf.appendingPathComponent(path)
+    }
+
 }
 

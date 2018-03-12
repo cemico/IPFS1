@@ -20,6 +20,21 @@
 		AA2E76B92056246D00B4027F /* HapticMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76B72056246D00B4027F /* HapticMgr.swift */; };
 		AA2E76BA2056246D00B4027F /* QueueMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76B82056246D00B4027F /* QueueMgr.swift */; };
 		AA2E76BD205624BB00B4027F /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA2E76BC205624BB00B4027F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA2E76BF20563E5500B4027F /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76BE20563E5500B4027F /* NetworkController.swift */; };
+		AA2E76C1205640CD00B4027F /* NetworkSupportProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76C0205640CD00B4027F /* NetworkSupportProtocol.swift */; };
+		AA2E76C320564AE900B4027F /* NetworkSupportNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76C220564AE900B4027F /* NetworkSupportNative.swift */; };
+		AA2E76C520564C2600B4027F /* URLSession_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76C420564C2600B4027F /* URLSession_Utils.swift */; };
+		AA2E76C720564C6500B4027F /* NetworkSupportAlamoFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76C620564C6500B4027F /* NetworkSupportAlamoFire.swift */; };
+		AA2E76C920564E4700B4027F /* NetworkSupportMockSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76C820564E4700B4027F /* NetworkSupportMockSync.swift */; };
+		AA2E76CB2056512900B4027F /* NetworkSupportMockAsync.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76CA2056512900B4027F /* NetworkSupportMockAsync.swift */; };
+		AA2E76CD205656E500B4027F /* Route1Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76CC205656E500B4027F /* Route1Model.swift */; };
+		AA2E76D0205659AB00B4027F /* Array_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76CF205659AB00B4027F /* Array_Utils.swift */; };
+		AA2E76D2205659C600B4027F /* Bool_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76D1205659C600B4027F /* Bool_Utils.swift */; };
+		AA2E76D4205659E500B4027F /* Float_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76D3205659E500B4027F /* Float_Utils.swift */; };
+		AA2E76D6205659F900B4027F /* Int_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76D5205659F900B4027F /* Int_Utils.swift */; };
+		AA2E76D820565A5E00B4027F /* Route2Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76D720565A5E00B4027F /* Route2Model.swift */; };
+		AA2E76DA2056669100B4027F /* Bundle_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76D92056669100B4027F /* Bundle_Utils.swift */; };
+		AA2E76DC205667AE00B4027F /* FileManager_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76DB205667AE00B4027F /* FileManager_Utils.swift */; };
 		AA9133D6204E72DA006B5101 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = AA9133D5204E72DA006B5101 /* ReadMe.md */; };
 		AA9133DB204E82F1006B5101 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9133DA204E82F1006B5101 /* Router.swift */; };
 		AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA751204D1EB40020611B /* AppDelegate.swift */; };
@@ -85,6 +100,21 @@
 		AA2E76B72056246D00B4027F /* HapticMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticMgr.swift; sourceTree = "<group>"; };
 		AA2E76B82056246D00B4027F /* QueueMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueMgr.swift; sourceTree = "<group>"; };
 		AA2E76BC205624BB00B4027F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/Alamofire.framework"; sourceTree = "<group>"; };
+		AA2E76BE20563E5500B4027F /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		AA2E76C0205640CD00B4027F /* NetworkSupportProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSupportProtocol.swift; sourceTree = "<group>"; };
+		AA2E76C220564AE900B4027F /* NetworkSupportNative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSupportNative.swift; sourceTree = "<group>"; };
+		AA2E76C420564C2600B4027F /* URLSession_Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSession_Utils.swift; sourceTree = "<group>"; };
+		AA2E76C620564C6500B4027F /* NetworkSupportAlamoFire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSupportAlamoFire.swift; sourceTree = "<group>"; };
+		AA2E76C820564E4700B4027F /* NetworkSupportMockSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSupportMockSync.swift; sourceTree = "<group>"; };
+		AA2E76CA2056512900B4027F /* NetworkSupportMockAsync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSupportMockAsync.swift; sourceTree = "<group>"; };
+		AA2E76CC205656E500B4027F /* Route1Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route1Model.swift; sourceTree = "<group>"; };
+		AA2E76CF205659AB00B4027F /* Array_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array_Utils.swift; sourceTree = "<group>"; };
+		AA2E76D1205659C600B4027F /* Bool_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bool_Utils.swift; sourceTree = "<group>"; };
+		AA2E76D3205659E500B4027F /* Float_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Float_Utils.swift; sourceTree = "<group>"; };
+		AA2E76D5205659F900B4027F /* Int_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int_Utils.swift; sourceTree = "<group>"; };
+		AA2E76D720565A5E00B4027F /* Route2Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route2Model.swift; sourceTree = "<group>"; };
+		AA2E76D92056669100B4027F /* Bundle_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle_Utils.swift; sourceTree = "<group>"; };
+		AA2E76DB205667AE00B4027F /* FileManager_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager_Utils.swift; sourceTree = "<group>"; };
 		AA9133D5204E72DA006B5101 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		AA9133DA204E82F1006B5101 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AAEDA74E204D1EB40020611B /* IPFS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,12 +159,22 @@
 			path = Singletons;
 			sourceTree = "<group>";
 		};
+		AA2E76CE205656EA00B4027F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA2E76CC205656E500B4027F /* Route1Model.swift */,
+				AA2E76D720565A5E00B4027F /* Route2Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AA9133D8204E745A006B5101 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				AAEDB1C9204D480F0020611B /* App */,
 				AAEDA768204D26F00020611B /* Controllers */,
 				AAEDA76B204D2FA10020611B /* Extensions */,
+				AA2E76CE205656EA00B4027F /* Models */,
 				AA9133DC204E8347006B5101 /* Network */,
 				AA2E76B62056246D00B4027F /* Singletons */,
 			);
@@ -153,6 +193,12 @@
 		AA9133DC204E8347006B5101 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				AA2E76BE20563E5500B4027F /* NetworkController.swift */,
+				AA2E76C620564C6500B4027F /* NetworkSupportAlamoFire.swift */,
+				AA2E76CA2056512900B4027F /* NetworkSupportMockAsync.swift */,
+				AA2E76C820564E4700B4027F /* NetworkSupportMockSync.swift */,
+				AA2E76C220564AE900B4027F /* NetworkSupportNative.swift */,
+				AA2E76C0205640CD00B4027F /* NetworkSupportProtocol.swift */,
 				AA9133DA204E82F1006B5101 /* Router.swift */,
 			);
 			path = Network;
@@ -224,7 +270,12 @@
 		AAEDA76B204D2FA10020611B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AA2E76CF205659AB00B4027F /* Array_Utils.swift */,
+				AA2E76D1205659C600B4027F /* Bool_Utils.swift */,
+				AA2E76D92056669100B4027F /* Bundle_Utils.swift */,
 				AA2E76AA2056245500B4027F /* CustomStringConvertible_Utils.swift */,
+				AA2E76D3205659E500B4027F /* Float_Utils.swift */,
+				AA2E76D5205659F900B4027F /* Int_Utils.swift */,
 				AA2E76AB2056245500B4027F /* NotificationCenter_Utils.swift */,
 				AA2E76AD2056245500B4027F /* NotificationName_Utils.swift */,
 				AA2E76A92056245500B4027F /* NSLock_Utils.swift */,
@@ -234,7 +285,9 @@
 				AAEDA76E204D2FD30020611B /* String_Utils.swift */,
 				AA2E76A72056245500B4027F /* UIView_TapGesture.swift */,
 				AA2E76A62056245500B4027F /* UIViewController_Utils.swift */,
+				AA2E76C420564C2600B4027F /* URLSession_Utils.swift */,
 				AAEDA769204D2CEE0020611B /* UserDefaults_Utils.swift */,
+				AA2E76DB205667AE00B4027F /* FileManager_Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -350,24 +403,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2E76C320564AE900B4027F /* NetworkSupportNative.swift in Sources */,
+				AA2E76C1205640CD00B4027F /* NetworkSupportProtocol.swift in Sources */,
 				AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */,
+				AA2E76BF20563E5500B4027F /* NetworkController.swift in Sources */,
 				AA2E76B22056245500B4027F /* CustomStringConvertible_Utils.swift in Sources */,
+				AA2E76CD205656E500B4027F /* Route1Model.swift in Sources */,
+				AA2E76DC205667AE00B4027F /* FileManager_Utils.swift in Sources */,
 				AA2E76A42056244500B4027F /* Globals.swift in Sources */,
+				AA2E76D6205659F900B4027F /* Int_Utils.swift in Sources */,
 				AA2E76B92056246D00B4027F /* HapticMgr.swift in Sources */,
 				AA2E76B32056245500B4027F /* NotificationCenter_Utils.swift in Sources */,
+				AA2E76C720564C6500B4027F /* NetworkSupportAlamoFire.swift in Sources */,
 				AA2E76B52056245500B4027F /* NotificationName_Utils.swift in Sources */,
 				AA2E76B12056245500B4027F /* NSLock_Utils.swift in Sources */,
+				AA2E76C520564C2600B4027F /* URLSession_Utils.swift in Sources */,
 				AAEDA76D204D2FB10020611B /* NSObject_Utils.swift in Sources */,
 				AA2E76B42056245500B4027F /* ProcessInfo_Utils.swift in Sources */,
 				AA2E76B02056245500B4027F /* QualityOfService_Utils.swift in Sources */,
 				AA2E76BA2056246D00B4027F /* QueueMgr.swift in Sources */,
 				AA9133DB204E82F1006B5101 /* Router.swift in Sources */,
 				AA2E76A52056244500B4027F /* Runtime.swift in Sources */,
+				AA2E76D0205659AB00B4027F /* Array_Utils.swift in Sources */,
+				AA2E76CB2056512900B4027F /* NetworkSupportMockAsync.swift in Sources */,
 				AAEDA76F204D2FD30020611B /* String_Utils.swift in Sources */,
+				AA2E76DA2056669100B4027F /* Bundle_Utils.swift in Sources */,
+				AA2E76D820565A5E00B4027F /* Route2Model.swift in Sources */,
 				AA2E76AF2056245500B4027F /* UIView_TapGesture.swift in Sources */,
+				AA2E76D4205659E500B4027F /* Float_Utils.swift in Sources */,
 				AAEDA76A204D2CEE0020611B /* UserDefaults_Utils.swift in Sources */,
+				AA2E76C920564E4700B4027F /* NetworkSupportMockSync.swift in Sources */,
 				AAEDA767204D26E60020611B /* UsersViewController.swift in Sources */,
 				AA2E76AE2056245500B4027F /* UIViewController_Utils.swift in Sources */,
+				AA2E76D2205659C600B4027F /* Bool_Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
