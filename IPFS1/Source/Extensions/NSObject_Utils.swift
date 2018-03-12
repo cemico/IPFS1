@@ -10,23 +10,13 @@ import Foundation
 
 extension NSObject {
 
-    ///////////////////////////////////////////////////////////
-    // computed properties
-    ///////////////////////////////////////////////////////////
-
-    var className: String {
+    public var className: String {
 
         return type(of: self).className
     }
 
-    ///////////////////////////////////////////////////////////
-    // static / class
-    ///////////////////////////////////////////////////////////
-
-    static var className: String {
+    public static var className: String {
 
         return String(describing: self)
     }
 }
-
-

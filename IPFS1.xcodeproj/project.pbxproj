@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA84016F205608D000C76B35 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA84016E205608D000C76B35 /* Router.swift */; };
+		AA9133D6204E72DA006B5101 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = AA9133D5204E72DA006B5101 /* ReadMe.md */; };
 		AA84018F205616D300C76B35 /* Alamofire.framework in Copy Files - Frameworks */ = {isa = PBXBuildFile; fileRef = AA84018E205616D200C76B35 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA840190205616F800C76B35 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA84018E205616D200C76B35 /* Alamofire.framework */; };
 		AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA751204D1EB40020611B /* AppDelegate.swift */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		AA84016E205608D000C76B35 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AA9133D5204E72DA006B5101 /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		AA84018E205616D200C76B35 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/Alamofire.framework"; sourceTree = "<group>"; };
 		AAEDA74E204D1EB40020611B /* IPFS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEDA751204D1EB40020611B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,10 +125,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< HEAD
 		AA840170205608D400C76B35 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				AA84016E205608D000C76B35 /* Router.swift */,
+=======
+		AA9133D8204E745A006B5101 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDB1C9204D480F0020611B /* App */,
+				AAEDA768204D26F00020611B /* Controllers */,
+				AAEDA76B204D2FA10020611B /* Extensions */,
+				AA9133DC204E8347006B5101 /* Network */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		AA9133D9204E746F006B5101 /* _Info */ = {
+			isa = PBXGroup;
+			children = (
+				AAEDB1C7204D47FE0020611B /* Notes.txt */,
+				AA9133D5204E72DA006B5101 /* ReadMe.md */,
+			);
+			path = _Info;
+			sourceTree = "<group>";
+		};
+		AA9133DC204E8347006B5101 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AA9133DA204E82F1006B5101 /* Router.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -151,10 +179,9 @@
 		AAEDA750204D1EB40020611B /* IPFS1 */ = {
 			isa = PBXGroup;
 			children = (
-				AAEDB1C7204D47FE0020611B /* Notes.txt */,
+				AA9133D9204E746F006B5101 /* _Info */,
 				AAEDA772204D34B00020611B /* 3rd Party */,
 				AAEDA763204D1F450020611B /* Resources */,
-				AAEDB1E5205608430020611B /* Source */,
 			);
 			path = IPFS1;
 			sourceTree = "<group>";
@@ -330,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA9133D6204E72DA006B5101 /* ReadMe.md in Resources */,
 				AAEDA759204D1EB40020611B /* Assets.xcassets in Resources */,
 				AAEDA771204D34A20020611B /* cartfile in Resources */,
 				AAEDAD59204D394C0020611B /* Cartfile.resolved in Resources */,
@@ -382,6 +410,8 @@
 				AAEDB1DD2055EF0C0020611B /* URLSession_Utils.swift in Sources */,
 				AAEDA76A204D2CEE0020611B /* UserDefaults_Utils.swift in Sources */,
 				AAEDA767204D26E60020611B /* UsersViewController.swift in Sources */,
+				AA9133DB204E82F1006B5101 /* Router.swift in Sources */,
+				AAEDA76D204D2FB10020611B /* NSObject_Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
