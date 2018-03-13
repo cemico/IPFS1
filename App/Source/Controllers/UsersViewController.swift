@@ -32,7 +32,6 @@ class UsersViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-/*
         let ipfsGateway = "147.135.130.181"
         let localHost = "127.0.0.1"
         let port80 = 80
@@ -52,15 +51,14 @@ class UsersViewController: BaseViewController {
                 print("bytes:", data.count)
                 let image = UIImage(data: data)
                 DispatchQueue.main.async {
-                    self.addressLabel.text = "Address: \(host):\(port)"
-                    self.hashLabel.text = "Hash: \(multihash.string())"
-                    self.imageView.image = image
+//                    self.addressLabel.text = "Address: \(host):\(port)"
+//                    self.hashLabel.text = "Hash: \(multihash.string())"
+//                    self.imageView.image = image
                 }
             })
         } catch {
             print("There was an error connecting")
         }
-*/
     }
 
     ///////////////////////////////////////////////////////////

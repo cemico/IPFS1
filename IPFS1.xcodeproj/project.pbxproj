@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA07E3FF205786D700CBF036 /* VarInt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA07E3F6205786D600CBF036 /* VarInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA07E401205786D700CBF036 /* SwiftMultiaddr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA07E3F7205786D700CBF036 /* SwiftMultiaddr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA07E403205786D700CBF036 /* SwiftBase58.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA07E3F8205786D700CBF036 /* SwiftBase58.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA07E405205786D700CBF036 /* SwiftGMP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA07E3F9205786D700CBF036 /* SwiftGMP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA07E407205786D700CBF036 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA07E3FA205786D700CBF036 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA07E409205786D700CBF036 /* SwiftMultihash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA07E3FB205786D700CBF036 /* SwiftMultihash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA07E40B205786D700CBF036 /* SwiftHex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA07E3FC205786D700CBF036 /* SwiftHex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA07E40D205786D700CBF036 /* SwiftIpfsApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AA07E3FD205786D700CBF036 /* SwiftIpfsApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA2E76A42056244500B4027F /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76A22056244500B4027F /* Globals.swift */; };
 		AA2E76A52056244500B4027F /* Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76A32056244500B4027F /* Runtime.swift */; };
 		AA2E76AE2056245500B4027F /* UIViewController_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76A62056245500B4027F /* UIViewController_Utils.swift */; };
@@ -19,7 +27,6 @@
 		AA2E76B52056245500B4027F /* NotificationName_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76AD2056245500B4027F /* NotificationName_Utils.swift */; };
 		AA2E76B92056246D00B4027F /* HapticMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76B72056246D00B4027F /* HapticMgr.swift */; };
 		AA2E76BA2056246D00B4027F /* QueueMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76B82056246D00B4027F /* QueueMgr.swift */; };
-		AA2E76BD205624BB00B4027F /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA2E76BC205624BB00B4027F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AA2E76BF20563E5500B4027F /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76BE20563E5500B4027F /* NetworkController.swift */; };
 		AA2E76C1205640CD00B4027F /* NetworkSupportProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76C0205640CD00B4027F /* NetworkSupportProtocol.swift */; };
 		AA2E76C320564AE900B4027F /* NetworkSupportNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76C220564AE900B4027F /* NetworkSupportNative.swift */; };
@@ -48,39 +55,23 @@
 		AAEDA76F204D2FD30020611B /* String_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA76E204D2FD30020611B /* String_Utils.swift */; };
 		AAEDA771204D34A20020611B /* cartfile in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA770204D34A20020611B /* cartfile */; };
 		AAEDAD59204D394C0020611B /* Cartfile.resolved in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA788204D394B0020611B /* Cartfile.resolved */; };
-		AAEDB1BA204D3B150020611B /* SwiftBase58.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA774204D36CB0020611B /* SwiftBase58.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AAEDB1BC204D3B150020611B /* SwiftGMP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA776204D36CB0020611B /* SwiftGMP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AAEDB1BE204D3B150020611B /* SwiftHex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA777204D36CB0020611B /* SwiftHex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AAEDB1C0204D3B150020611B /* SwiftIpfsApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA779204D36CB0020611B /* SwiftIpfsApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AAEDB1C2204D3B150020611B /* SwiftMultiaddr.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA778204D36CB0020611B /* SwiftMultiaddr.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AAEDB1C4204D3B150020611B /* SwiftMultihash.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA775204D36CB0020611B /* SwiftMultihash.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AAEDB1C6204D3B160020611B /* VarInt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AAEDA77A204D36CB0020611B /* VarInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		AA2E76BB205624AC00B4027F /* CopyFiles */ = {
+		AA07E40E205786D700CBF036 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AA2E76BD205624BB00B4027F /* Alamofire.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AAEDB1B1204D3ACE0020611B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				AAEDB1BA204D3B150020611B /* SwiftBase58.framework in Embed Frameworks */,
-				AAEDB1C2204D3B150020611B /* SwiftMultiaddr.framework in Embed Frameworks */,
-				AAEDB1C6204D3B160020611B /* VarInt.framework in Embed Frameworks */,
-				AAEDB1C4204D3B150020611B /* SwiftMultihash.framework in Embed Frameworks */,
-				AAEDB1BC204D3B150020611B /* SwiftGMP.framework in Embed Frameworks */,
-				AAEDB1BE204D3B150020611B /* SwiftHex.framework in Embed Frameworks */,
-				AAEDB1C0204D3B150020611B /* SwiftIpfsApi.framework in Embed Frameworks */,
+				AA07E403205786D700CBF036 /* SwiftBase58.framework in Embed Frameworks */,
+				AA07E3FF205786D700CBF036 /* VarInt.framework in Embed Frameworks */,
+				AA07E40B205786D700CBF036 /* SwiftHex.framework in Embed Frameworks */,
+				AA07E40D205786D700CBF036 /* SwiftIpfsApi.framework in Embed Frameworks */,
+				AA07E409205786D700CBF036 /* SwiftMultihash.framework in Embed Frameworks */,
+				AA07E401205786D700CBF036 /* SwiftMultiaddr.framework in Embed Frameworks */,
+				AA07E407205786D700CBF036 /* Alamofire.framework in Embed Frameworks */,
+				AA07E405205786D700CBF036 /* SwiftGMP.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +79,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AA07E3F6205786D600CBF036 /* VarInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VarInt.framework; path = "App/3rd Party/Carthage/Build/iOS/VarInt.framework"; sourceTree = "<group>"; };
+		AA07E3F7205786D700CBF036 /* SwiftMultiaddr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMultiaddr.framework; path = "App/3rd Party/Carthage/Build/iOS/SwiftMultiaddr.framework"; sourceTree = "<group>"; };
+		AA07E3F8205786D700CBF036 /* SwiftBase58.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftBase58.framework; path = "App/3rd Party/Carthage/Build/iOS/SwiftBase58.framework"; sourceTree = "<group>"; };
+		AA07E3F9205786D700CBF036 /* SwiftGMP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGMP.framework; path = "App/3rd Party/Carthage/Build/iOS/SwiftGMP.framework"; sourceTree = "<group>"; };
+		AA07E3FA205786D700CBF036 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "App/3rd Party/Carthage/Build/iOS/Alamofire.framework"; sourceTree = "<group>"; };
+		AA07E3FB205786D700CBF036 /* SwiftMultihash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMultihash.framework; path = "App/3rd Party/Carthage/Build/iOS/SwiftMultihash.framework"; sourceTree = "<group>"; };
+		AA07E3FC205786D700CBF036 /* SwiftHex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHex.framework; path = "App/3rd Party/Carthage/Build/iOS/SwiftHex.framework"; sourceTree = "<group>"; };
+		AA07E3FD205786D700CBF036 /* SwiftIpfsApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftIpfsApi.framework; path = "App/3rd Party/Carthage/Build/iOS/SwiftIpfsApi.framework"; sourceTree = "<group>"; };
 		AA2E76A22056244500B4027F /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		AA2E76A32056244500B4027F /* Runtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runtime.swift; sourceTree = "<group>"; };
 		AA2E76A62056245500B4027F /* UIViewController_Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController_Utils.swift; sourceTree = "<group>"; };
@@ -100,7 +99,6 @@
 		AA2E76AD2056245500B4027F /* NotificationName_Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationName_Utils.swift; sourceTree = "<group>"; };
 		AA2E76B72056246D00B4027F /* HapticMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticMgr.swift; sourceTree = "<group>"; };
 		AA2E76B82056246D00B4027F /* QueueMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueMgr.swift; sourceTree = "<group>"; };
-		AA2E76BC205624BB00B4027F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/Alamofire.framework"; sourceTree = "<group>"; };
 		AA2E76BE20563E5500B4027F /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		AA2E76C0205640CD00B4027F /* NetworkSupportProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSupportProtocol.swift; sourceTree = "<group>"; };
 		AA2E76C220564AE900B4027F /* NetworkSupportNative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSupportNative.swift; sourceTree = "<group>"; };
@@ -131,13 +129,6 @@
 		AAEDA76C204D2FB10020611B /* NSObject_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject_Utils.swift; sourceTree = "<group>"; };
 		AAEDA76E204D2FD30020611B /* String_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Utils.swift; sourceTree = "<group>"; };
 		AAEDA770204D34A20020611B /* cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = cartfile; sourceTree = "<group>"; };
-		AAEDA774204D36CB0020611B /* SwiftBase58.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftBase58.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftBase58.framework"; sourceTree = "<group>"; };
-		AAEDA775204D36CB0020611B /* SwiftMultihash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMultihash.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftMultihash.framework"; sourceTree = "<group>"; };
-		AAEDA776204D36CB0020611B /* SwiftGMP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGMP.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftGMP.framework"; sourceTree = "<group>"; };
-		AAEDA777204D36CB0020611B /* SwiftHex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftHex.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftHex.framework"; sourceTree = "<group>"; };
-		AAEDA778204D36CB0020611B /* SwiftMultiaddr.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftMultiaddr.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftMultiaddr.framework"; sourceTree = "<group>"; };
-		AAEDA779204D36CB0020611B /* SwiftIpfsApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftIpfsApi.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/SwiftIpfsApi.framework"; sourceTree = "<group>"; };
-		AAEDA77A204D36CB0020611B /* VarInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VarInt.framework; path = "IPFS1/3rd Party/Carthage/Build/iOS/VarInt.framework"; sourceTree = "<group>"; };
 		AAEDA788204D394B0020611B /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		AAEDB1C7204D47FE0020611B /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,7 +210,7 @@
 		AAEDA745204D1EB40020611B = {
 			isa = PBXGroup;
 			children = (
-				AAEDA750204D1EB40020611B /* IPFS1 */,
+				AAEDA750204D1EB40020611B /* App */,
 				AAEDA74F204D1EB40020611B /* Products */,
 				AAEDA773204D36CB0020611B /* Frameworks */,
 			);
@@ -233,7 +224,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AAEDA750204D1EB40020611B /* IPFS1 */ = {
+		AAEDA750204D1EB40020611B /* App */ = {
 			isa = PBXGroup;
 			children = (
 				AA9133D9204E746F006B5101 /* _Info */,
@@ -241,7 +232,7 @@
 				AAEDA763204D1F450020611B /* Resources */,
 				AA9133D8204E745A006B5101 /* Source */,
 			);
-			path = IPFS1;
+			path = App;
 			sourceTree = "<group>";
 		};
 		AAEDA763204D1F450020611B /* Resources */ = {
@@ -317,14 +308,14 @@
 		AAEDA773204D36CB0020611B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AA2E76BC205624BB00B4027F /* Alamofire.framework */,
-				AAEDA774204D36CB0020611B /* SwiftBase58.framework */,
-				AAEDA776204D36CB0020611B /* SwiftGMP.framework */,
-				AAEDA777204D36CB0020611B /* SwiftHex.framework */,
-				AAEDA779204D36CB0020611B /* SwiftIpfsApi.framework */,
-				AAEDA778204D36CB0020611B /* SwiftMultiaddr.framework */,
-				AAEDA775204D36CB0020611B /* SwiftMultihash.framework */,
-				AAEDA77A204D36CB0020611B /* VarInt.framework */,
+				AA07E3FA205786D700CBF036 /* Alamofire.framework */,
+				AA07E3F8205786D700CBF036 /* SwiftBase58.framework */,
+				AA07E3F9205786D700CBF036 /* SwiftGMP.framework */,
+				AA07E3FC205786D700CBF036 /* SwiftHex.framework */,
+				AA07E3FD205786D700CBF036 /* SwiftIpfsApi.framework */,
+				AA07E3F7205786D700CBF036 /* SwiftMultiaddr.framework */,
+				AA07E3FB205786D700CBF036 /* SwiftMultihash.framework */,
+				AA07E3F6205786D600CBF036 /* VarInt.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -349,8 +340,7 @@
 				AAEDA74A204D1EB40020611B /* Sources */,
 				AAEDA74B204D1EB40020611B /* Frameworks */,
 				AAEDA74C204D1EB40020611B /* Resources */,
-				AAEDB1B1204D3ACE0020611B /* Embed Frameworks */,
-				AA2E76BB205624AC00B4027F /* CopyFiles */,
+				AA07E40E205786D700CBF036 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -542,13 +532,21 @@
 				DEVELOPMENT_TEAM = 2D27P7B34F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = IPFS1/Resources/Info.plist;
+				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cemico.IPFS1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -675,13 +673,21 @@
 				DEVELOPMENT_TEAM = 2D27P7B34F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = IPFS1/Resources/Info.plist;
+				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cemico.IPFS1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -701,13 +707,21 @@
 				DEVELOPMENT_TEAM = 2D27P7B34F;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = IPFS1/Resources/Info.plist;
+				INFOPLIST_FILE = App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/IPFS1/3rd\\ Party/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/App/3rd\\ Party/Carthage/Build/iOS",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cemico.IPFS1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
