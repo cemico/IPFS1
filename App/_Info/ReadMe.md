@@ -6,5 +6,6 @@ Install Carthage
 
 Update Carthage Dependencies
   > cd <installdir>/App/3rd\ Party
-  > carthage update --platform iOS
+  > carthage update --use-submodules
+  > (works also to refetch before update) carthage update --platform iOS
 
