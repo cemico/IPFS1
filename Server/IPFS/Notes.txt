@@ -1,0 +1,14 @@
+
+This is setup to run from gulp, which requires the -g / global flag during install to use it form the command line
+
+To invoke, just type gulp, which looks for the GuilpFile.js, and does the rest.
+
+The port number in GulpFile.js is one off from the hard coded port number in App.js, which is done to distinguish
+which method of invocation was used, either 'node App.js' or 'gulp'.
+
+For a list of supported end-points, hit '/' or '/api/v1'.
+
+ex) npm install body-parser --save
+
+1. sudo npm install -g gulp
+2. npm update

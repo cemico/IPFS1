@@ -31,7 +31,7 @@ enum Router {
     ///////////////////////////////////////////////////////////
 
     // each case can have various arguments if IDs and such need to be passed in
-    case route1NoArgs
+    case cryptoKeys
 
     // registers
     case route2Args(Attributes)
@@ -48,8 +48,8 @@ extension Router {
         struct Api {
 
             // schemes / protocols
+            static let httpScheme               = "http://"
             static let httpsScheme              = "https://"
-            static let currentScheme            = Api.httpsScheme
 
             // canonical names / subdomains
             static let wwwCName                 = "www."
@@ -59,45 +59,50 @@ extension Router {
             static let currentApi               = Api.apiCName
 
             // hosts / domains - dev, int/staging, prod
+//            static let port                     = "3000"
+            static let port                     = "8005"
             static let intHost                  = "int." + companyDomain
             static let devHost1                 = "dev." + companyDomain
-            static let devHost                  = "localhost:3000"
+            static let devHost                  = "localhost:" + Api.port
             static let prodHost                 = companyDomain
+
+            // roots
+            static let api                      = "/api"
 
             // versions
             static let vNone                    = ""
             static let v1                       = "/v1"
-            static let currentVersion           = Api.vNone
+            static let currentVersion           = Api.v1
 
             // pulling it all together
 #if APP_SCHEME_DEV
 
-            // https://localhost:3000
+            // http://localhost:8005/api/v1/
             // (1) https://api.dev.cemico.com
-            static let currentHost              = Api.devHost
-            static let currentBase1             = Api.currentScheme + Api.apiCName        + Api.currentHost
-            static let currentBase              = Api.currentScheme                       + Api.currentHost
+            static let currentHost              = Api.devHost + Api.api + Api.currentVersion
+            static let currentBase1             = Api.httpsScheme + Api.apiCName         + Api.currentHost
+            static let currentBase              = Api.httpScheme                         + Api.currentHost
             static let currentRtcBase           = Api.currentBase
 
 #elseif APP_SCHEME_INT
 
             // https://api.int.cemico.com
             static let currentHost              = Api.intHost
-            static let currentBase              = Api.currentScheme + Api.apiCName        + Api.currentHost
-            static let currentRtcBase           = Api.currentScheme + Api.currentRtc      + Api.currentHost + Api.currentVersion
+            static let currentBase              = Api.httpsScheme + Api.apiCName          + Api.currentHost
+            static let currentRtcBase           = Api.httpsScheme + Api.currentRtc        + Api.currentHost + Api.currentVersion
 
 #else // APP_SCHEME_PROD
 
             // https://api.cemico.com
             static let currentHost              = Api.prodHost
-            static let currentBase              = Api.currentScheme + Api.currentApi      + Api.currentHost + Api.currentVersion
-            static let currentRtcBase           = Api.currentScheme + Api.currentRtc      + Api.currentHost + Api.currentVersion
+            static let currentBase              = Api.httpsScheme + Api.currentApi        + Api.currentHost + Api.currentVersion
+            static let currentRtcBase           = Api.httpsScheme + Api.currentRtc        + Api.currentHost + Api.currentVersion
 #endif
         }
 
         struct Endpoints {
 
-            static let route1NoArgs             = "/route1"
+            static let cryptokeys               = "/cryptokeys"
             static let route2Args               = "/route2"
         }
 
@@ -119,6 +124,12 @@ extension Router {
         case token
         case error
         case message
+    }
+
+    enum CryptoKeys {
+
+        // cryptokeys endpoint
+        case id, type, nextId, userId, extra, date
     }
 
     enum DeviceKeys: String {
@@ -157,7 +168,7 @@ extension Router {
         switch self {
 
             // GETs
-            case .route1NoArgs:
+            case .cryptoKeys:
                 return .get
 
             // POSTs
@@ -170,8 +181,8 @@ extension Router {
 
         switch self {
 
-            case .route1NoArgs:
-                return Constants.Endpoints.route1NoArgs
+            case .cryptoKeys:
+                return Constants.Endpoints.cryptokeys
 
             case .route2Args:
                 return Constants.Endpoints.route2Args
@@ -183,7 +194,7 @@ extension Router {
         // all secure except few
         switch self {
 
-            case .route1NoArgs:
+            case .cryptoKeys:
                 return false
 
             // most add the header
@@ -307,7 +318,7 @@ extension Router: URLRequestConvertible {
 //                return encodeRequest(mutableURLRequest, requestType: .array, arrayItems: arrayItems)
 
             // simple call, no parameters / no encoding
-            case .route1NoArgs:       fallthrough
+            case .cryptoKeys:       fallthrough
             default:
                 return encodeRequest(mutableURLRequest, requestType: .default)
         }

@@ -10,10 +10,10 @@ import Foundation
 
 class NetworkSupportMockSync: NetworkSupport {
 
-    func handleRoute1(request: URLRequest, processingCompletionHandler: @escaping (Route1Model?) -> Void) {
+    func handleCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
 
         // common handler for any derived protocol classes
-        doRoute1(request: request, processingCompletionHandler: processingCompletionHandler)
+        doCryptoKeys(request: request, processingCompletionHandler: processingCompletionHandler)
     }
 
     func handleRoute2(request: URLRequest, processingCompletionHandler: @escaping (Route2Model?) -> Void) {
@@ -22,19 +22,22 @@ class NetworkSupportMockSync: NetworkSupport {
         doRoute2(request: request, processingCompletionHandler: processingCompletionHandler)
     }
 
-    func doRoute1(request: URLRequest, processingCompletionHandler: @escaping (Route1Model?) -> Void) {
+    func doCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
 
         // simulated response - move out into seperate file with perhaps path being environment variable
-        let body: Attributes = [ "a" : "123",
-                                 "b" : 123,
-                                 "c" : "mama"  ]
+        let body: Attributes = [ "id"     : "QmcDsbeSnw6Eoi8nPPw9vTiGAHEUfMbHbU6fpiuFx3xWpL",
+                                 "type"   : "text",
+                                 "nextId" : "",
+                                 "userId" : "",
+                                 "extra"  : "dynamic text",
+                                 "date"   : "2018-03-16"  ]
 
         // serialize
         var data: Data?
         var error: Error?
         do {
 
-            data = try JSONSerialization.data(withJSONObject: body, options: [])
+            data = try JSONSerialization.data(withJSONObject: [body], options: [])
         }
         catch(let err) {
 
@@ -42,7 +45,7 @@ class NetworkSupportMockSync: NetworkSupport {
         }
 
         // use common handler
-        handleRoute1Results(data: data, error: error, json: nil, resultsCompletionHandler: { (model: Route1Model?) in
+        handleCryptoKeysResults(data: data, error: error, json: nil, resultsCompletionHandler: { (model: CryptoKeysModel?) in
 
             // pass results up
             processingCompletionHandler(model)

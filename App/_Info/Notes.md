@@ -1,5 +1,5 @@
 
-
+[IPFS]
 
 [following steps from: https://ipfs.io/docs/getting-started/]
 
@@ -71,7 +71,6 @@ ipfs swarm connect /ip4/104.236.176.52/tcp/4001/ipfs/QmSoLnSGccFuZQJzRadHn95W2Cr
 Search for a given peer on the network:
 ipfs dht findpeer QmSoLnSGccFuZQJzRadHn95W2CrSFmZuTdDWP8HXaHca9z
 
-
 11. setup mount points
 a) sudo mkdir /ipfs /ipns
 b) sudo chown `whoami` /ipfs /ipns
@@ -84,5 +83,49 @@ Daves-iMac-Desk:~ daverogers$ i pin ls | grep -i recursive
 14. nice encryption ipfs article: https://medium.com/@mycoralhealth/learn-to-securely-share-files-on-the-blockchain-with-ipfs-219ee47df54c
 
 
+[SERVER ipfs components setup]
+
+1. update node pieces
+a) sudo npm cache clean -f
+b) sudo npm install -g n
+c) sudo n stable
+
+2. install ipfs node pieces
+a) npm install ipfs
+b) npm install async
+
+3. validate can add via node
+a) download https://github.com/ipfs/js-ipfs/blob/master/examples/ipfs-101/1.js (note: nice article as well)
+b) run, validate returned key against ipfs gateway, mine: https://ipfs.io/ipfs/QmXgZAUWd8yo4tvjBETqzUy3wLx5YRzuDwUQnBwRGrAmAo
 
 
+[SERVER node components setup]
+1. mongo
+a) download: http://www.mongodb.org/downloads OR npm install mongodb
+b) add the Mongo 'bin' folder to your path (eg. Update .bash_profile)
+c) run 'mongod' on port 27017 (the default port)
+d) sanity check, launch shell, mongo, type "db" to show current database in use within shell, "show dbs", "use <db>", etc.
+e) quick reference: https://docs.mongodb.com/manual/reference/mongo-shell/
+
+2. node
+a) https://nodejs.org/en/download/
+
+3. basic node server with supporting modules
+a) body-parser: npm install body-parser --save
+b) express:     npm install express --save
+c) mondodb:     npm install mongodb --save
+d) mongoose:    npm install mongoose --save
+e) gulp:        npm rm --global gulp
+f) gulp:        npm install --global gulp-cli
+g) package:     npm init
+h) gulp:        npm install --save-dev gulp
+
+4. auto gen basic app, express-generator
+a) sudo npm install express-generator -g
+b) express <app> -e
+c) cd <app>
+d) npm install
+e) npm start
+
+5. start
+a) from server folder where App.js resides, run: node App.js

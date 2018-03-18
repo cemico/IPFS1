@@ -45,17 +45,17 @@ extension NetworkController {
     // api
     ///////////////////////////////////////////////////////////
 
-    func getRoute1(completionHandler: @escaping (Route1Model?) -> Void) {
+    func getCryptoKeys(completionHandler: @escaping (CryptoKeysModel?) -> Void) {
 
         // sanity check
         guard let network = network else { completionHandler(nil); return }
 
         // get request
-        let route = Router.route1NoArgs
+        let route = Router.cryptoKeys
         guard let request = try? route.asURLRequest() else { completionHandler(nil); return }
 
         // hit server specific implementation
-        network.handleRoute1(request: request, processingCompletionHandler: completionHandler)
+        network.handleCryptoKeys(request: request, processingCompletionHandler: completionHandler)
     }
 
     func postRout2(token: String, completionHandler: @escaping (Route2Model?) -> Void) {

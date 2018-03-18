@@ -54,6 +54,11 @@ playground.xcworkspace
 
 Carthage/Build
 
+# Node
+
+Server/IPFS/node_modules
+Server/IPFS/.idea
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the

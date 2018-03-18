@@ -1,5 +1,5 @@
 //
-//  UsersViewController.swift
+//  FilesViewController.swift
 //  IPFS1
 //
 //  Created by Dave Rogers on 3/4/18.
@@ -10,7 +10,7 @@ import UIKit
 import SwiftIpfsApi
 import SwiftMultihash
 
-class UsersViewController: BaseViewController {
+class FilesViewController: BaseViewController {
 
     ///////////////////////////////////////////////////////////
     // outlets
@@ -61,6 +61,15 @@ class UsersViewController: BaseViewController {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        Network.getCryptoKeys { (keys) in
+
+            print(keys)
+        }
+    }
+
     ///////////////////////////////////////////////////////////
     // actions
     ///////////////////////////////////////////////////////////
@@ -73,7 +82,7 @@ class UsersViewController: BaseViewController {
 // Localize Protocol
 ///////////////////////////////////////////////////////////
 
-extension UsersViewController: LocalizeProtocol {
+extension FilesViewController: LocalizeProtocol {
 
     func localize() {
 
@@ -85,7 +94,7 @@ extension UsersViewController: LocalizeProtocol {
 // UITableViewDataSource
 ///////////////////////////////////////////////////////////
 
-extension UsersViewController: UITableViewDataSource {
+extension FilesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -95,10 +104,10 @@ extension UsersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         // guaranteed cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.className, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: FileTableViewCell.className, for: indexPath)
 
         // make custom mods
-        if let cell = cell as? UserTableViewCell {
+        if let cell = cell as? FileTableViewCell {
 
             // get data
             let data = users[indexPath.row]
@@ -113,15 +122,15 @@ extension UsersViewController: UITableViewDataSource {
 // UITableViewDelegate
 ///////////////////////////////////////////////////////////
 
-extension UsersViewController: UITableViewDelegate {
+extension FilesViewController: UITableViewDelegate {
 
 }
 
 ///////////////////////////////////////////////////////////
-// UserTableViewCell
+// FileTableViewCell
 ///////////////////////////////////////////////////////////
 
-class UserTableViewCell: UITableViewCell {
+class FileTableViewCell: UITableViewCell {
 
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var hashKey: UILabel!

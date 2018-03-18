@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-729" y="99"/>
         </scene>
-        <!--Users-->
+        <!--IPFS File Viewer-->
         <scene sceneID="Jsc-7d-5bE">
             <objects>
-                <viewController id="d7Y-oZ-YU3" customClass="UsersViewController" customModule="IPFS1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d7Y-oZ-YU3" customClass="FilesViewController" customModule="IPFS1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pLV-Gf-3oC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h7u-l7-X3K"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Users" id="h9M-rC-Kn9">
+                    <navigationItem key="navigationItem" title="IPFS File Viewer" id="h9M-rC-Kn9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bUR-cT-rfT">
                             <connections>
                                 <action selector="onAddUser:" destination="d7Y-oZ-YU3" id="Uju-cU-pWe"/>

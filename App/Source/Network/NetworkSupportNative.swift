@@ -14,7 +14,7 @@ import Foundation
 
 class NetworkSupportNative: NetworkSupport {
 
-    func handleRoute1(request: URLRequest, processingCompletionHandler: @escaping (Route1Model?) -> Void) {
+    func handleCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
 
         // wrap native iOS networking support
         URLSession.dataRequest(request: request) { [weak self] (data: Data?, error: Error?) in
@@ -23,7 +23,7 @@ class NetworkSupportNative: NetworkSupport {
             guard let strongSelf = self else { processingCompletionHandler(nil); return }
 
             // use common handler
-            strongSelf.handleRoute1Results(data: data, error: error, json: nil, resultsCompletionHandler: { (model: Route1Model?) in
+            strongSelf.handleCryptoKeysResults(data: data, error: error, json: nil, resultsCompletionHandler: { (model: CryptoKeysModel?) in
 
                 // pass results up
                 processingCompletionHandler(model)

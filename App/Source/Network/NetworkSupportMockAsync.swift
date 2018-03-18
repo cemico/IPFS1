@@ -10,12 +10,12 @@ import Foundation
 
 class NetworkSupportMockAsync: NetworkSupportMockSync {
     
-    override func handleRoute1(request: URLRequest, processingCompletionHandler: @escaping (Route1Model?) -> Void) {
+    override func handleCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
 
         Concurrency.backgroundAsync { [weak self] in
 
             // call common handler since protocol derived classes don't play well with super
-            self?.doRoute1(request: request, processingCompletionHandler: processingCompletionHandler)
+            self?.doCryptoKeys(request: request, processingCompletionHandler: processingCompletionHandler)
         }
     }
 
