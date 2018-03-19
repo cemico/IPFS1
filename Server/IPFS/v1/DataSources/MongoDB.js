@@ -45,7 +45,7 @@ var dbCreate = function() {
             type       : "image",
             nextId     : "QmXgZAUWd8yo4tvjBETqzUy3wLx5YRzuDwUQnBwRGrAmAo",
             userId     : "",
-            extra      : "alfred",
+            extra      : "alfred (png)",
             date       : new Date("2018-03-16T08:00:00")
         },
         {
@@ -61,7 +61,7 @@ var dbCreate = function() {
             type       : "image",
             nextId     : "",
             userId     : "",
-            extra      : "cap shield",
+            extra      : "cap shield (jpg)",
             date       : new Date("2018-03-16T08:20:00")
         }
     ];

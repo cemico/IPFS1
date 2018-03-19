@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SwiftIpfsApi
-import SwiftMultihash
 
 ///////////////////////////////////////////////////////////
 // selector support
@@ -49,34 +47,6 @@ class FilesViewController: BaseViewController {
                               selector: .cryptoKeysUpdate,
                               name: .cryptoKeys,
                               object: nil)
-
-        let ipfsGateway = "147.135.130.181"
-        let localHost = "127.0.0.1"
-        let port80 = 80
-        let port5001 = 5001
-        let text1 = "QmcDsbeSnw6Eoi8nPPw9vTiGAHEUfMbHbU6fpiuFx3xWpL"
-        let jpg1 = "QmXWmucTKr86jNtRGNXgGAxjezwCkx2joumPiJ31RWtkY2"
-        let png1 = "QmexmDJEV6oTNDs1nyj6pVuV4NLwgwfaeCAyZ64a9RLJhh"
-
-        let host = ipfsGateway // localHost // ipfsGateway
-        let port = port80      // port5001  // port80
-        do {
-            let api = try IpfsApi(host: host, port: port)
-            let multihash = try! fromB58String(jpg1)
-            print("mhash: ", multihash.string())
-            try api.get(multihash, completionHandler: { (bits) in
-                let data = Data(bytes: bits)
-                print("bytes:", data.count)
-                let image = UIImage(data: data)
-                DispatchQueue.main.async {
-//                    self.addressLabel.text = "Address: \(host):\(port)"
-//                    self.hashLabel.text = "Hash: \(multihash.string())"
-//                    self.imageView.image = image
-                }
-            })
-        } catch {
-            print("There was an error connecting")
-        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -85,6 +55,18 @@ class FilesViewController: BaseViewController {
         // update to latest
         cryptoKeys = DataCache.cryptoKeys
         tableView.reloadData()
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        if let vc = segue.destination as? FileViewController {
+
+            if let indexPath = tableView.indexPathForSelectedRow {
+
+                vc.model = cryptoKeys[indexPath.row]
+            }
+        }
     }
 
     ///////////////////////////////////////////////////////////
@@ -145,8 +127,10 @@ extension FilesViewController: UITableViewDataSource {
 
             // get data
             let data = cryptoKeys[indexPath.row]
-            cell.name.text = data.type
-            cell.hashKey.text = data.key
+            cell.typeLabel.text = data.type
+            cell.keyLabel.text = data.key
+            cell.extraLabel.text = data.extra
+            cell.dateLabel.text = data.date
         }
 
         return cell
@@ -167,8 +151,10 @@ extension FilesViewController: UITableViewDelegate {
 
 class FileTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var hashKey: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var keyLabel: UILabel!
+    @IBOutlet weak var extraLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
 
     override func prepareForReuse() {
         super.prepareForReuse()
