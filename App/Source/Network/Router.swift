@@ -63,7 +63,9 @@ extension Router {
             static let port                     = "8005"
             static let intHost                  = "int." + companyDomain
             static let devHost1                 = "dev." + companyDomain
-            static let devHost                  = "localhost:" + Api.port
+            static let devHost0External         = "67.159.151.70:" + Api.port
+            static let devHost0Local            = "localhost:" + Api.port
+            static let devHost                  = Api.devHost0External
             static let prodHost                 = companyDomain
 
             // roots
