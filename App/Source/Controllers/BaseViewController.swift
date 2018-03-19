@@ -49,16 +49,16 @@ class BaseViewController: UIViewController {
     @objc func changeLanguage(notification: Notification) {
 
         // extract data required data
-        guard let newLanguageId = notification.userInfo?[Notification.Name.Keys.Language.newLanguageId] as? String else { return }
+        guard let newLanguageId = notification.userInfo?[NNKeys.Language.newLanguageId.rawValue] as? String else { return }
 
         // extract optional data
         var oldLanguageId = ""
-        if let languageId = notification.userInfo?[Notification.Name.Keys.Language.oldLanguageId] as? String {
+        if let languageId = notification.userInfo?[NNKeys.Language.oldLanguageId.rawValue] as? String {
 
             oldLanguageId = languageId
         }
 
-        print("new language:", newLanguageId, "old language:", oldLanguageId)
+        printInfo("new language: \(newLanguageId), old language: \(oldLanguageId)")
         doLocalize()
     }
 

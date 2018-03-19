@@ -11,7 +11,7 @@ import UIKit
 // quick access
 var Broadcast = NotificationCenter.default
 
-typealias UserInfoDict = [AnyHashable : AnyHashable]
+typealias UserInfoDict = [AnyHashable : Any]
 
 extension NotificationCenter {
 

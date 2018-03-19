@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // allow for runtime network configuration
         initNetwork()
 
+        // load initial data
+        DataCache.load()
+
         return true
     }
 

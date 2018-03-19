@@ -10,6 +10,16 @@ import UIKit
 import SwiftIpfsApi
 import SwiftMultihash
 
+///////////////////////////////////////////////////////////
+// selector support
+///////////////////////////////////////////////////////////
+
+fileprivate extension Selector {
+
+    // more readable selector handling when notification handler observed
+    static let cryptoKeysUpdate = #selector(FilesViewController.cryptoKeysUpdate(notification:))
+}
+
 class FilesViewController: BaseViewController {
 
     ///////////////////////////////////////////////////////////
@@ -24,6 +34,7 @@ class FilesViewController: BaseViewController {
 
     // convert dict into (k,v) sorted array
     private lazy var users: [(key: String, value: String)] = Settings.users.sorted(by: <)
+    private var cryptoKeys: [CryptoKeyModel] = []
 
     ///////////////////////////////////////////////////////////
     // system overrides
@@ -31,6 +42,13 @@ class FilesViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // listen for changes to crypto keys
+        // note: released in base class
+        Broadcast.addObserver(self,
+                              selector: .cryptoKeysUpdate,
+                              name: .cryptoKeys,
+                              object: nil)
 
         let ipfsGateway = "147.135.130.181"
         let localHost = "127.0.0.1"
@@ -64,10 +82,26 @@ class FilesViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        Network.getCryptoKeys { (keys) in
+        // update to latest
+        cryptoKeys = DataCache.cryptoKeys
+        tableView.reloadData()
+    }
 
-            print(keys)
-        }
+    ///////////////////////////////////////////////////////////
+    // notifications
+    ///////////////////////////////////////////////////////////
+
+    @objc func cryptoKeysUpdate(notification: Notification) {
+
+        // extract data required data
+        guard let cryptoKeys = notification.userInfo?[NNKeys.Data.keys.rawValue] as? CryptoKeysModel else { return }
+        cryptoKeys.keys.forEach({ print("key:", $0.key) })
+
+        // update local cache
+        self.cryptoKeys = cryptoKeys.keys
+
+        // note: comes in on main thread
+        tableView.reloadData()
     }
 
     ///////////////////////////////////////////////////////////
@@ -98,7 +132,7 @@ extension FilesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return users.count
+        return cryptoKeys.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -110,8 +144,9 @@ extension FilesViewController: UITableViewDataSource {
         if let cell = cell as? FileTableViewCell {
 
             // get data
-            let data = users[indexPath.row]
-            cell.name.text = data.key
+            let data = cryptoKeys[indexPath.row]
+            cell.name.text = data.type
+            cell.hashKey.text = data.key
         }
 
         return cell

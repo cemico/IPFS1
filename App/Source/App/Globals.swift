@@ -12,13 +12,18 @@ import UIKit
 // quick accessors
 ///////////////////////////////////////////////////////////
 
+// global vars
 var Application = UIApplication.shared
 var ApplicationDelegate = (Application.delegate as! AppDelegate)
 var Concurrency = QueueMgr.shared
 var Feedback = HapticMgr.shared
 var Settings = UserDefaults.standard
 var Device = UIDevice.current
- var Network = NetworkController.shared
+var Network = NetworkController.shared
+var DataCache = DataController.shared
+
+// alias shortcuts
+typealias NNKeys = Notification.Name.Keys
 
 ///////////////////////////////////////////////////////////
 // global scope

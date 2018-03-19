@@ -47,6 +47,7 @@
 		AA9133DB204E82F1006B5101 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9133DA204E82F1006B5101 /* Router.swift */; };
 		AAA32D792057BC0F00FC4CE6 /* CryptoKeyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA32D782057BC0F00FC4CE6 /* CryptoKeyModel.swift */; };
 		AAA32D7B205F01AE00FC4CE6 /* Date_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA32D7A205F01AE00FC4CE6 /* Date_Utils.swift */; };
+		AAA32D7D205F28FE00FC4CE6 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA32D7C205F28FE00FC4CE6 /* DataController.swift */; };
 		AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA751204D1EB40020611B /* AppDelegate.swift */; };
 		AAEDA757204D1EB40020611B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA755204D1EB40020611B /* Main.storyboard */; };
 		AAEDA759204D1EB40020611B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA758204D1EB40020611B /* Assets.xcassets */; };
@@ -122,6 +123,7 @@
 		AA9133DA204E82F1006B5101 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		AAA32D782057BC0F00FC4CE6 /* CryptoKeyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoKeyModel.swift; sourceTree = "<group>"; };
 		AAA32D7A205F01AE00FC4CE6 /* Date_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date_Utils.swift; sourceTree = "<group>"; };
+		AAA32D7C205F28FE00FC4CE6 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		AAEDA74E204D1EB40020611B /* IPFS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEDA751204D1EB40020611B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAEDA756204D1EB40020611B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		AA2E76B62056246D00B4027F /* Singletons */ = {
 			isa = PBXGroup;
 			children = (
+				AAA32D7C205F28FE00FC4CE6 /* DataController.swift */,
 				AA2E76B72056246D00B4027F /* HapticMgr.swift */,
 				AA2E76B82056246D00B4027F /* QueueMgr.swift */,
 			);
@@ -445,6 +448,7 @@
 				AA2E76D4205659E500B4027F /* Float_Utils.swift in Sources */,
 				AAEDA76A204D2CEE0020611B /* UserDefaults_Utils.swift in Sources */,
 				AA2E76C920564E4700B4027F /* NetworkSupportMockSync.swift in Sources */,
+				AAA32D7D205F28FE00FC4CE6 /* DataController.swift in Sources */,
 				AAEDA767204D26E60020611B /* FilesViewController.swift in Sources */,
 				AA2E76AE2056245500B4027F /* UIViewController_Utils.swift in Sources */,
 				AA2E76D2205659C600B4027F /* Bool_Utils.swift in Sources */,

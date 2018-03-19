@@ -19,10 +19,16 @@ extension Notification.Name {
         // good practice using reverse dns notation
         private static let baseMessage  = companyReverseDomain + "messages."
 
-        struct system {
+        struct System {
 
             static let prefix           = "system."
-            static let changeLanguage   = baseMessage + system.prefix + "changeLanguage"
+            static let changeLanguage   = baseMessage + System.prefix + "changeLanguage"
+        }
+
+        struct Data {
+
+            static let prefix           = "data."
+            static let cryptoKeys       = baseMessage + Data.prefix + "cryptoKeys"
         }
     }
 
@@ -32,18 +38,23 @@ extension Notification.Name {
 
     struct Keys {
 
-        struct Language {
+        enum Language: String {
 
-            static let oldLanguageId    = "oldLanguageId"
-            static let newLanguageId    = "newLanguageId"
+            case oldLanguageId, newLanguageId
+        }
+
+        enum Data: String {
+
+            case keys
         }
     }
 
     //
-    // Language
-    // note: usage in postMessage: .changeLanguage
+    // Acccessors
+    // note: usage in postMessage: .cryptoKeys
     //
 
-    static let changeLanguage           = Notification.Name(Messages.system.changeLanguage)
+    static let changeLanguage           = Notification.Name(Messages.System.changeLanguage)
+    static let cryptoKeys               = Notification.Name(Messages.Data.cryptoKeys)
 }
 
