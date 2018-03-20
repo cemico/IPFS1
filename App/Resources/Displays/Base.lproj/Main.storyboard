@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-729" y="99"/>
         </scene>
-        <!--IPFS File Viewer-->
+        <!--Files-->
         <scene sceneID="Jsc-7d-5bE">
             <objects>
                 <viewController id="d7Y-oZ-YU3" customClass="FilesViewController" customModule="IPFS1" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,10 +120,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h7u-l7-X3K"/>
                     </view>
-                    <navigationItem key="navigationItem" title="IPFS File Viewer" id="h9M-rC-Kn9">
+                    <navigationItem key="navigationItem" title="Files" id="h9M-rC-Kn9">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bUR-cT-rfT">
                             <connections>
-                                <action selector="onAddUser:" destination="d7Y-oZ-YU3" id="Uju-cU-pWe"/>
                                 <segue destination="OOE-38-wM6" kind="presentation" id="Rdo-bV-k8e"/>
                             </connections>
                         </barButtonItem>
@@ -229,6 +228,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="S4R-XD-kbm"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Details" id="ZyD-Rt-XbR">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="OhA-KE-I8T">
+                            <connections>
+                                <action selector="onShare:" destination="nPO-aQ-bCV" id="y4a-5m-lR6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="bytesLabel" destination="PmR-1r-5I1" id="bT9-JF-42V"/>
                         <outlet property="contentImageLabel" destination="JCi-aE-fZS" id="ksY-M7-AYH"/>
@@ -288,7 +296,7 @@
                         <viewLayoutGuide key="safeArea" id="HdF-Hx-rkB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="N6C-7C-hcZ">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="89j-e7-6a0">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="89j-e7-6a0">
                             <connections>
                                 <action selector="onCancel:" destination="Gq2-MF-VFT" id="48t-et-qVo"/>
                             </connections>
@@ -317,7 +325,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ3-T7-yjb">
-                                <rect key="frame" x="0.0" y="113" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="113" width="375" height="510"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>

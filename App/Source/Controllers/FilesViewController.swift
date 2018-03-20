@@ -96,15 +96,6 @@ class FilesViewController: BaseViewController {
         // note: comes in on main thread
         tableView.reloadData()
     }
-
-    ///////////////////////////////////////////////////////////
-    // actions
-    ///////////////////////////////////////////////////////////
-
-    @IBAction func onAddUser(_ sender: UIBarButtonItem) {
-
-        
-    }
 }
 
 ///////////////////////////////////////////////////////////
@@ -115,6 +106,14 @@ extension FilesViewController: AddItemProtocol {
 
     func addTextItem(_ text: String) {
 
+        // server: add text item
+
+        // server response: check if success, json of data including key
+
+        // server: create and save new data model item
+        //         (note: update server test data with this)
+
+        // client: reload table
         print(text)
     }
 

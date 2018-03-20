@@ -9,6 +9,7 @@
 import UIKit
 import SwiftIpfsApi
 import SwiftMultihash
+import MessageUI
 
 class FileViewController: UIViewController {
 
@@ -46,6 +47,12 @@ class FileViewController: UIViewController {
 
         return (model.type.lowercased() == "image")
     }
+
+    var ipfsGatewayUrl: String {
+
+        guard let model = model else { return "" }
+        return "https://ipfs.io/ipfs/\(model.key)"
+    }
     
     ///////////////////////////////////////////////////////////
     // system overrides
@@ -65,12 +72,28 @@ class FileViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
 
-        guard let model = model else { return }
         if let vc = segue.destination as? ExternalViewController {
 
             // construct ipfs gateway hash lookup url
-            vc.url = "https://ipfs.io/ipfs/\(model.key)"
+            vc.url = ipfsGatewayUrl
         }
+    }
+
+    ///////////////////////////////////////////////////////////
+    // actions
+    ///////////////////////////////////////////////////////////
+
+    @IBAction func onShare(_ sender: Any) {
+
+        guard MFMessageComposeViewController.canSendText() else { return }
+
+        let messageVC = MFMessageComposeViewController()
+        messageVC.body = ipfsGatewayUrl
+        messageVC.recipients = ["4082342285"]
+        messageVC.messageComposeDelegate = nil
+        self.present(messageVC, animated: true, completion: nil)
+
+        print("share")
     }
 
     ///////////////////////////////////////////////////////////
