@@ -52,6 +52,8 @@
 		AAA32D812060099000FC4CE6 /* ExternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA32D802060099000FC4CE6 /* ExternalViewController.swift */; };
 		AAA32D83206013B900FC4CE6 /* Data_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA32D82206013B900FC4CE6 /* Data_Utils.swift */; };
 		AAA32D8520601E9D00FC4CE6 /* Logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAA32D8420601E9D00FC4CE6 /* Logo@3x.png */; };
+		AAC0D0E72060EF80007D1928 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0D0E62060EF80007D1928 /* AddItemViewController.swift */; };
+		AAC0D0E92060EFC7007D1928 /* AddItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0D0E82060EFC7007D1928 /* AddItemProtocol.swift */; };
 		AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDA751204D1EB40020611B /* AppDelegate.swift */; };
 		AAEDA757204D1EB40020611B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA755204D1EB40020611B /* Main.storyboard */; };
 		AAEDA759204D1EB40020611B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEDA758204D1EB40020611B /* Assets.xcassets */; };
@@ -132,6 +134,8 @@
 		AAA32D802060099000FC4CE6 /* ExternalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalViewController.swift; sourceTree = "<group>"; };
 		AAA32D82206013B900FC4CE6 /* Data_Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_Utils.swift; sourceTree = "<group>"; };
 		AAA32D8420601E9D00FC4CE6 /* Logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@3x.png"; sourceTree = "<group>"; };
+		AAC0D0E62060EF80007D1928 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		AAC0D0E82060EFC7007D1928 /* AddItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemProtocol.swift; sourceTree = "<group>"; };
 		AAEDA74E204D1EB40020611B /* IPFS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPFS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEDA751204D1EB40020611B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAEDA756204D1EB40020611B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 		AA2E76E12056750F00B4027F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				AAC0D0E82060EFC7007D1928 /* AddItemProtocol.swift */,
 				AA2E76DF2056750600B4027F /* LocalizeProtocol.swift */,
 			);
 			path = Protocols;
@@ -290,10 +295,11 @@
 		AAEDA768204D26F00020611B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AAC0D0E62060EF80007D1928 /* AddItemViewController.swift */,
 				AA2E76DD2056743F00B4027F /* BaseViewController.swift */,
 				AAA32D802060099000FC4CE6 /* ExternalViewController.swift */,
-				AAA32D7E205FFEA000FC4CE6 /* FileViewController.swift */,
 				AAEDA766204D26E60020611B /* FilesViewController.swift */,
+				AAA32D7E205FFEA000FC4CE6 /* FileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -442,8 +448,10 @@
 				AA2E76DE2056743F00B4027F /* BaseViewController.swift in Sources */,
 				AAEDA752204D1EB40020611B /* AppDelegate.swift in Sources */,
 				AAA32D7B205F01AE00FC4CE6 /* Date_Utils.swift in Sources */,
+				AAC0D0E92060EFC7007D1928 /* AddItemProtocol.swift in Sources */,
 				AA2E76BF20563E5500B4027F /* NetworkController.swift in Sources */,
 				AA2E76B22056245500B4027F /* CustomStringConvertible_Utils.swift in Sources */,
+				AAC0D0E72060EF80007D1928 /* AddItemViewController.swift in Sources */,
 				AA2E76E02056750600B4027F /* LocalizeProtocol.swift in Sources */,
 				AAA32D812060099000FC4CE6 /* ExternalViewController.swift in Sources */,
 				AA2E76CD205656E500B4027F /* Route1Model.swift in Sources */,

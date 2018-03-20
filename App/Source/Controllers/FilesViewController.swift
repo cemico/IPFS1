@@ -64,7 +64,18 @@ class FilesViewController: BaseViewController {
 
             if let indexPath = tableView.indexPathForSelectedRow {
 
+                // set model
                 vc.model = cryptoKeys[indexPath.row]
+            }
+        }
+        else if let nav = segue.destination as? UINavigationController {
+
+            // nav pages
+            guard let vc = nav.viewControllers.last else { return }
+            if let vc = vc as? AddItemViewController {
+
+                // wire delegate
+                vc.delegate = self
             }
         }
     }
@@ -91,6 +102,25 @@ class FilesViewController: BaseViewController {
     ///////////////////////////////////////////////////////////
 
     @IBAction func onAddUser(_ sender: UIBarButtonItem) {
+
+        
+    }
+}
+
+///////////////////////////////////////////////////////////
+// Add Item Protocol
+///////////////////////////////////////////////////////////
+
+extension FilesViewController: AddItemProtocol {
+
+    func addTextItem(_ text: String) {
+
+        print(text)
+    }
+
+    func addImageItem(_ image: UIImage) {
+
+        // todo
     }
 }
 

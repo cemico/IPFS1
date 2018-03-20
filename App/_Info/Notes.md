@@ -74,6 +74,7 @@ ipfs dht findpeer QmSoLnSGccFuZQJzRadHn95W2CrSFmZuTdDWP8HXaHca9z
 11. setup mount points
 a) sudo mkdir /ipfs /ipns
 b) sudo chown `whoami` /ipfs /ipns
+c) [optionally] restart daemon: ipfs daemon --mount
 
 12. public either by giving hash or if you sign the data, give the public key
 
