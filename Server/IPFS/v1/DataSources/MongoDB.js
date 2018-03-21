@@ -63,6 +63,14 @@ var dbCreate = function() {
             userId     : "",
             extra      : "cap shield (jpg)",
             date       : new Date("2018-03-16T08:20:00")
+        },
+        {
+            id         : "QmYEDX8mxK7ApBkCq5mDnPRK5eXxSdC3S35ftdAr2yXdNm",
+            type       : "text",
+            nextId     : "",
+            userId     : "",
+            extra      : "Brian test",
+            date       : new Date("2018-03-19T18:30:00")
         }
     ];
 

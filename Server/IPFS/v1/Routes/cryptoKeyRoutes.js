@@ -74,7 +74,39 @@ var routes = function(CryptoKey, version, endPoint) {
             console.log("post");
 
             // create a new object to add to database
-            var cryptoKey = new CryptoKey(req.body);
+            var isDirectInsert = req.body.isDirectInsert;
+            var cryptoKey;
+            console.log("isDirect: ", isDirectInsert)
+
+            if (isDirectInsert) {
+
+                // all fields specified in body with isDirectInsert = 1
+                console.log(("direct insert"))
+                cryptoKey = new CryptoKey(req.body);
+                console.log(cryptoKey)
+            }
+            else {
+
+                // todo: add to ipfs, get key, save
+                console.log("todo: add to ipfs, get key")
+
+                // only id, type, and text declared in body
+                console.log("implicit insert");
+                var id = req.body.id;
+                var type = req.body.type;
+                var text = req.body.text;
+
+                var json = {
+                    id: id,
+                    type: type,
+                    nextId: "",
+                    userId: "",
+                    extra: "extra",
+                    date: Date()
+                }
+                cryptoKey = new CryptoKey(json)
+                console.log(cryptoKey)
+            }
 
             // since this is a mongoose object from mongodb, to add object, only need to save object
             cryptoKey.save(function(err) {
@@ -90,13 +122,6 @@ var routes = function(CryptoKey, version, endPoint) {
                     res.status(201).send(cryptoKey);
                 }
             });
-
-            //// to screen for monitoring purposes
-            //console.log(cryptoKey);
-
-            // send back to caller
-            // res.send(cryptoKey);
-            //res.status(201).send(cryptoKey);
         });
 
     // create middleware for Id route
