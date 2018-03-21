@@ -29,17 +29,17 @@ protocol NetworkSupport: class {
     // required
     //
 
-    func handleCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void)
+    func handleGetCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void)
     func handleRoute2(request: URLRequest, processingCompletionHandler: @escaping (Route2Model?) -> Void)
 
     //
     // optional (with default implementation via the extension)
     //
 
-    func handleCryptoKeysResults(data: Data?,
-                                 error: Error?,
-                                 json: Attributes?,
-                                 resultsCompletionHandler: @escaping (CryptoKeysModel?) -> Void)
+    func handleGetCryptoKeysResults(data: Data?,
+                                    error: Error?,
+                                    json: Attributes?,
+                                    resultsCompletionHandler: @escaping (CryptoKeysModel?) -> Void)
 
     func handleRoute2Results(data: Data?,
                              error: Error?,
@@ -50,10 +50,10 @@ protocol NetworkSupport: class {
 extension NetworkSupport {
 
     // default implementation
-    func handleCryptoKeysResults(data: Data?,
-                                 error: Error?,
-                                 json: Attributes?,
-                                 resultsCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
+    func handleGetCryptoKeysResults(data: Data?,
+                                    error: Error?,
+                                    json: Attributes?,
+                                    resultsCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
 
         var model: CryptoKeysModel? = nil
         defer {

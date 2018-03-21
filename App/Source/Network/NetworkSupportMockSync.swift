@@ -10,10 +10,10 @@ import Foundation
 
 class NetworkSupportMockSync: NetworkSupport {
 
-    func handleCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
+    func handleGetCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
 
         // common handler for any derived protocol classes
-        doCryptoKeys(request: request, processingCompletionHandler: processingCompletionHandler)
+        doGetCryptoKeys(request: request, processingCompletionHandler: processingCompletionHandler)
     }
 
     func handleRoute2(request: URLRequest, processingCompletionHandler: @escaping (Route2Model?) -> Void) {
@@ -22,7 +22,7 @@ class NetworkSupportMockSync: NetworkSupport {
         doRoute2(request: request, processingCompletionHandler: processingCompletionHandler)
     }
 
-    func doCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
+    func doGetCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
 
         // simulated response - move out into seperate file with perhaps path being environment variable
         let body: Attributes = [ "id"     : "QmcDsbeSnw6Eoi8nPPw9vTiGAHEUfMbHbU6fpiuFx3xWpL",
@@ -45,7 +45,7 @@ class NetworkSupportMockSync: NetworkSupport {
         }
 
         // use common handler
-        handleCryptoKeysResults(data: data, error: error, json: nil, resultsCompletionHandler: { (model: CryptoKeysModel?) in
+        handleGetCryptoKeysResults(data: data, error: error, json: nil, resultsCompletionHandler: { (model: CryptoKeysModel?) in
 
             // pass results up
             processingCompletionHandler(model)

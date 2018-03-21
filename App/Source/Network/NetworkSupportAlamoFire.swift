@@ -15,7 +15,7 @@ import Alamofire
 
 class NetworkSupportAlamoFire: NetworkSupport {
 
-    func handleCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
+    func handleGetCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
 
         Alamofire.request(request).responseJSON { [weak self] (response: DataResponse) in
 
@@ -28,7 +28,7 @@ class NetworkSupportAlamoFire: NetworkSupport {
 //            let json = response.result.value as? Attributes
 
             // use common handler
-            strongSelf.handleCryptoKeysResults(data: data, error: error, json: nil, resultsCompletionHandler: { (model: CryptoKeysModel?) in
+            strongSelf.handleGetCryptoKeysResults(data: data, error: error, json: nil, resultsCompletionHandler: { (model: CryptoKeysModel?) in
 
                 // pass results up
                 processingCompletionHandler(model)

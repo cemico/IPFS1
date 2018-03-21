@@ -55,7 +55,7 @@ extension NetworkController {
         guard let request = try? route.asURLRequest() else { completionHandler(nil); return }
 
         // hit server specific implementation
-        network.handleCryptoKeys(request: request, processingCompletionHandler: completionHandler)
+        network.handleGetCryptoKeys(request: request, processingCompletionHandler: completionHandler)
     }
 
     func postRout2(token: String, completionHandler: @escaping (Route2Model?) -> Void) {
