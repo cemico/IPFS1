@@ -51,7 +51,7 @@ extension NetworkController {
         guard let network = network else { completionHandler(nil); return }
 
         // get request
-        let route = Router.cryptoKeys
+        let route = Router.getCryptoKeys
         guard let request = try? route.asURLRequest() else { completionHandler(nil); return }
 
         // hit server specific implementation

@@ -31,7 +31,12 @@ enum Router {
     ///////////////////////////////////////////////////////////
 
     // each case can have various arguments if IDs and such need to be passed in
-    case cryptoKeys
+
+    // get all crypto key items
+    case getCryptoKeys
+
+    // add new crypto key
+    case postCryptoKey(Attributes)
 
     // registers
     case route2Args(Attributes)
@@ -170,10 +175,11 @@ extension Router {
         switch self {
 
             // GETs
-            case .cryptoKeys:
+            case .getCryptoKeys:
                 return .get
 
             // POSTs
+            case .postCryptoKey:        fallthrough
             case .route2Args:
                 return .post
         }
@@ -183,7 +189,10 @@ extension Router {
 
         switch self {
 
-            case .cryptoKeys:
+            case .getCryptoKeys:
+                return Constants.Endpoints.cryptokeys
+
+            case .postCryptoKey:
                 return Constants.Endpoints.cryptokeys
 
             case .route2Args:
@@ -196,8 +205,11 @@ extension Router {
         // all secure except few
         switch self {
 
-            case .cryptoKeys:
+            case .getCryptoKeys:
                 return false
+
+            case .postCryptoKey:
+                return true
 
             // most add the header
             default:
@@ -308,6 +320,8 @@ extension Router: URLRequestConvertible {
             // perhaps blocks for each type of EncodeRequestType
 
             // json encoding
+            case .postCryptoKey(let parameters):
+                return encodeRequest(mutableURLRequest, requestType: .json, parameters: parameters)
             case .route2Args(let parameters):
                 return encodeRequest(mutableURLRequest, requestType: .json, parameters: parameters)
 
@@ -320,7 +334,7 @@ extension Router: URLRequestConvertible {
 //                return encodeRequest(mutableURLRequest, requestType: .array, arrayItems: arrayItems)
 
             // simple call, no parameters / no encoding
-            case .cryptoKeys:       fallthrough
+            case .getCryptoKeys:       fallthrough
             default:
                 return encodeRequest(mutableURLRequest, requestType: .default)
         }
