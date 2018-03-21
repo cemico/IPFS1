@@ -88,8 +88,9 @@ class FileViewController: UIViewController {
         guard MFMessageComposeViewController.canSendText() else { return }
 
         let messageVC = MFMessageComposeViewController()
-        messageVC.body = ipfsGatewayUrl
-        messageVC.recipients = ["4082342285"]
+        messageVC.body = "From a land far, far away...\n\n\(ipfsGatewayUrl)"
+//        messageVC.recipients = ["4082342285"]
+        messageVC.recipients = []
         messageVC.messageComposeDelegate = nil
         self.present(messageVC, animated: true, completion: nil)
 
