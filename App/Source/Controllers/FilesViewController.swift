@@ -110,7 +110,7 @@ extension FilesViewController: AddItemProtocol {
 
         // server response: check if success, json of data including key
 
-        // server: create and save new data model item
+        // server: create and save new data model item (could be dup key)
         //         (note: update server test data with this)
 
         // client: reload table

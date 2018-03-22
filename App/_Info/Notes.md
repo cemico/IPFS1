@@ -130,3 +130,14 @@ e) npm start
 
 5. start
 a) from server folder where App.js resides, run: node App.js
+
+6. api
+a) add takes the text to add and the type of text (for future image support)
+b) get at http://67.159.151.70:8005/api/v1/cryptokeys
+c) post to http://67.159.151.70:8005/api/v1/cryptokeys
+    example body data:
+    {
+    "type": "text",
+    "text": "Hi Mom 357"
+    }
+
