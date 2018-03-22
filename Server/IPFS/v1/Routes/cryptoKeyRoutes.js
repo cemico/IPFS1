@@ -3,6 +3,9 @@
 // references
 var express = require('express');           // web server
 
+const IPFS = require('ipfs-mini');          // ipfs server
+const ipfs = new IPFS({ host: 'localhost', port: 5001, protocol: 'http' });
+
 // create function to act as class
 var routes = function(CryptoKey, version, endPoint) {
 
@@ -87,41 +90,61 @@ var routes = function(CryptoKey, version, endPoint) {
             }
             else {
 
-                // todo: add to ipfs, get key, save
-                console.log("todo: add to ipfs, get key")
-
-                // only id, type, and text declared in body
-                console.log("implicit insert");
-                var id = req.body.id;
-                var type = req.body.type;
+                // get text to add to ipfs
                 var text = req.body.text;
 
-                var json = {
-                    id: id,
-                    type: type,
-                    nextId: "",
-                    userId: "",
-                    extra: "extra",
-                    date: Date()
-                }
-                cryptoKey = new CryptoKey(json)
-                console.log(cryptoKey)
+                // attempt add
+                ipfs.add(text, function (err, result) {
+
+                    if (err) {
+
+                        // error check
+                        console.log(err);
+                        res.status(500).send(err);
+                    }
+                    else {
+
+                        // success
+                        console.log(result);
+
+                        // save key
+                        var cipfsCryptographicHashKey = result;
+
+                        // note: only type and text declared in body
+                        console.log("implicit insert");
+
+                        // create json for create
+                        var json = {
+                            id: cipfsCryptographicHashKey,
+                            type: req.body.type,
+                            nextId: "",
+                            userId: "",
+                            extra: "extra",
+                            date: Date()
+                        }
+
+                        // new mongoose object
+                        cryptoKey = new CryptoKey(json)
+                        console.log(cryptoKey)
+
+                        // since this is a mongoose object from mongodb, to add object, only need to save object
+                        cryptoKey.save(function(err) {
+
+                            if (err)
+                            {
+                                console.log(err);
+                                res.status(500).send(err);
+                            }
+                            else
+                            {
+                                // complete
+                                console.log("Successfully created key.");
+                                res.status(201).send(cryptoKey);
+                            }
+                        });
+                    }
+                });
             }
-
-            // since this is a mongoose object from mongodb, to add object, only need to save object
-            cryptoKey.save(function(err) {
-
-                if (err)
-                {
-                    console.log(err);
-                    res.status(500).send(err);
-                }
-                else
-                {
-                    console.log("Successfully created key.");
-                    res.status(201).send(cryptoKey);
-                }
-            });
         });
 
     // create middleware for Id route
