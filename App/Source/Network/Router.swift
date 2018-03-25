@@ -133,10 +133,16 @@ extension Router {
         case message
     }
 
-    enum CryptoKeys {
+    enum GetCryptoKeys: String {
 
-        // cryptokeys endpoint
+        // get - cryptokeys endpoint
         case id, type, nextId, userId, extra, date
+    }
+
+    enum SetText: String {
+
+        // post - cryptokeys endpoint
+        case type, text
     }
 
     enum DeviceKeys: String {

@@ -58,35 +58,32 @@ extension NetworkController {
         network.handleGetCryptoKeys(request: request, processingCompletionHandler: completionHandler)
     }
 
-    func postRout2(token: String, completionHandler: @escaping (Route2Model?) -> Void) {
+    func postNewText(text: String, completionHandler: @escaping (CryptoKeyModel?) -> Void) {
 
         // sanity check
         guard let network = network else { completionHandler(nil); return }
 
         // argument validation
-        guard !token.isEmpty else { completionHandler(nil); return }
+        guard !text.isEmpty else { completionHandler(nil); return }
 
         // package up parameters
         let parameters: Attributes = [
 
-            Router.DeviceKeys.deviceName.rawValue       : Device.name,
-            Router.DeviceKeys.platform.rawValue         : Device.systemName,
-            Router.DeviceKeys.platformVersion.rawValue  : Device.systemVersion,
-            Router.ServerKeys.token.rawValue            : Settings.token
+            Router.SetText.type.rawValue : Router.SetText.text.rawValue,
+            Router.SetText.text.rawValue : text
         ]
         printInfo("\(parameters)")
 
         // get request
-        let route = Router.route2Args(parameters)
-        guard let request = try? route.asURLRequest(with: token) else { completionHandler(nil); return }
+        let route = Router.postCryptoKey(parameters)
+        guard let request = try? route.asURLRequest(with: Settings.token) else { completionHandler(nil); return }
 
         // hit server specific implementation
-        network.handleRoute2(request: request, processingCompletionHandler: {(model: Route2Model?) in
+        network.handlePostNewText(request: request, processingCompletionHandler: {(model: CryptoKeyModel?) in
 
             if model != nil {
 
                 // save
-                Settings.token = token
             }
 
             // pass along

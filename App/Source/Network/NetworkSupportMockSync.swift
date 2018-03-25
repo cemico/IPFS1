@@ -16,10 +16,10 @@ class NetworkSupportMockSync: NetworkSupport {
         doGetCryptoKeys(request: request, processingCompletionHandler: processingCompletionHandler)
     }
 
-    func handleRoute2(request: URLRequest, processingCompletionHandler: @escaping (Route2Model?) -> Void) {
+    func handlePostNewText(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeyModel?) -> Void) {
 
         // common handler for any derived protocol classes
-        doRoute2(request: request, processingCompletionHandler: processingCompletionHandler)
+        doPostNewText(request: request, processingCompletionHandler: processingCompletionHandler)
     }
 
     func doGetCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void) {
@@ -52,12 +52,11 @@ class NetworkSupportMockSync: NetworkSupport {
         })
     }
 
-    func doRoute2(request: URLRequest, processingCompletionHandler: @escaping (Route2Model?) -> Void) {
+    func doPostNewText(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeyModel?) -> Void) {
 
         // simulated response
-        let body: Attributes = [ "a" : "123",
-                                 "b" : 123,
-                                 "c" : "mama"  ]
+        let body: Attributes = [ "text" : "Hi Mom abc",
+                                 "type" : "text"  ]
 
         // serialize
         var data: Data?
@@ -72,7 +71,7 @@ class NetworkSupportMockSync: NetworkSupport {
         }
 
         // use common handler
-        handleRoute2Results(data: data, error: error, json: nil, resultsCompletionHandler: { (model: Route2Model?) in
+        handlePostNewTextResults(data: data, error: error, json: nil, resultsCompletionHandler: { (model: CryptoKeyModel?) in
 
             // pass results up
             processingCompletionHandler(model)

@@ -32,7 +32,7 @@ protocol NetworkSupport: class {
     func handleGetCryptoKeys(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeysModel?) -> Void)
 
 
-    func handleRoute2(request: URLRequest, processingCompletionHandler: @escaping (Route2Model?) -> Void)
+    func handlePostNewText(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeyModel?) -> Void)
 
     //
     // optional (with default implementation via the extension)
@@ -43,10 +43,10 @@ protocol NetworkSupport: class {
                                     json: Attributes?,
                                     resultsCompletionHandler: @escaping (CryptoKeysModel?) -> Void)
 
-    func handleRoute2Results(data: Data?,
-                             error: Error?,
-                             json: Attributes?,
-                             resultsCompletionHandler: @escaping (Route2Model?) -> Void)
+    func handlePostNewTextResults(data: Data?,
+                                  error: Error?,
+                                  json: Attributes?,
+                                  resultsCompletionHandler: @escaping (CryptoKeyModel?) -> Void)
 }
 
 extension NetworkSupport {
@@ -108,12 +108,12 @@ extension NetworkSupport {
         }
     }
     
-    func handleRoute2Results(data: Data?,
-                             error: Error?,
-                             json: Attributes?,
-                             resultsCompletionHandler: @escaping (Route2Model?) -> Void) {
+    func handlePostNewTextResults(data: Data?,
+                                  error: Error?,
+                                  json: Attributes?,
+                                  resultsCompletionHandler: @escaping (CryptoKeyModel?) -> Void) {
 
-        var model: Route2Model? = nil
+        var model: CryptoKeyModel? = nil
         defer {
 
             // all exit paths must call completion handler
@@ -150,7 +150,7 @@ extension NetworkSupport {
 
             // automatic full object model build up
             let decoder = JSONDecoder()
-            model = try decoder.decode(Route2Model.self, from: data)
+            model = try decoder.decode(CryptoKeyModel.self, from: data)
         }
         catch {
 

@@ -31,7 +31,7 @@ class NetworkSupportNative: NetworkSupport {
         }
     }
 
-    func handleRoute2(request: URLRequest, processingCompletionHandler: @escaping (Route2Model?) -> Void) {
+    func handlePostNewText(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeyModel?) -> Void) {
 
         // wrap native iOS networking support
         URLSession.dataRequest(request: request) { [weak self] (data: Data?, error: Error?) in
@@ -40,7 +40,7 @@ class NetworkSupportNative: NetworkSupport {
             guard let strongSelf = self else { processingCompletionHandler(nil); return }
 
             // use common handler
-            strongSelf.handleRoute2Results(data: data, error: error, json: nil, resultsCompletionHandler: { (model: Route2Model?) in
+            strongSelf.handlePostNewTextResults(data: data, error: error, json: nil, resultsCompletionHandler: { (model: CryptoKeyModel?) in
 
                 // pass results up
                 processingCompletionHandler(model)

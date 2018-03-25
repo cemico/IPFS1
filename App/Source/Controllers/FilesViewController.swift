@@ -106,9 +106,16 @@ extension FilesViewController: AddItemProtocol {
 
     func addTextItem(_ text: String) {
 
-        // server: add text item
+        // validate
+        guard !text.isEmpty else { return }
 
-        // server response: check if success, json of data including key
+        // request to add
+        Network.postNewText(text: text) { [weak self] (model: CryptoKeyModel?) in
+
+            guard let model = model else { return }
+
+            print(model)
+        }
 
         // server: create and save new data model item (could be dup key)
         //         (note: update server test data with this)

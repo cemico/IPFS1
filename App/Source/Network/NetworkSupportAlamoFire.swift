@@ -36,7 +36,7 @@ class NetworkSupportAlamoFire: NetworkSupport {
         }
     }
 
-    func handleRoute2(request: URLRequest, processingCompletionHandler: @escaping (Route2Model?) -> Void) {
+    func handlePostNewText(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeyModel?) -> Void) {
 
         Alamofire.request(request).responseJSON { [weak self] (response: DataResponse) in
 
@@ -46,10 +46,11 @@ class NetworkSupportAlamoFire: NetworkSupport {
             // extract results
             let data = response.data
             let error = response.result.error
-//            let json = response.result.value as? Attributes
+            let json = response.result.value as? Attributes
+            print(json)
 
             // use common handler
-            strongSelf.handleRoute2Results(data: data, error: error, json: nil, resultsCompletionHandler: { (model: Route2Model?) in
+            strongSelf.handlePostNewTextResults(data: data, error: error, json: nil, resultsCompletionHandler: { (model: CryptoKeyModel?) in
 
                 // pass results up
                 processingCompletionHandler(model)

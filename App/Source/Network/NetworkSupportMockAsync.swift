@@ -19,13 +19,13 @@ class NetworkSupportMockAsync: NetworkSupportMockSync {
         }
     }
 
-    override func handleRoute2(request: URLRequest, processingCompletionHandler: @escaping (Route2Model?) -> Void) {
+    override func handlePostNewText(request: URLRequest, processingCompletionHandler: @escaping (CryptoKeyModel?) -> Void) {
 
-        super.handleRoute2(request: request, processingCompletionHandler: processingCompletionHandler)
+        super.handlePostNewText(request: request, processingCompletionHandler: processingCompletionHandler)
         Concurrency.backgroundAsync { [weak self] in
 
             // call common handler since protocol derived classes don't play well with super
-            self?.doRoute2(request: request, processingCompletionHandler: processingCompletionHandler)
+            self?.doPostNewText(request: request, processingCompletionHandler: processingCompletionHandler)
         }
     }
 }
