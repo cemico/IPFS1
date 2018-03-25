@@ -7,7 +7,7 @@ var dbUrl = 'mongodb://localhost/ipfs'
 var db = mongoose.connect(dbUrl, function() {
 
     // reset dbo
-    dbReset();
+    //dbReset();
 });
 
 // Reset databaseo
@@ -33,14 +33,6 @@ var dbCreate = function() {
     var seedData = [
 
         {
-            id         : "QmcDsbeSnw6Eoi8nPPw9vTiGAHEUfMbHbU6fpiuFx3xWpL",
-            type       : "text",
-            nextId     : "QmexmDJEV6oTNDs1nyj6pVuV4NLwgwfaeCAyZ64a9RLJhh",
-            userId     : "",
-            extra      : "dynamic text",
-            date       : new Date("2018-03-16T07:00:00")
-        },
-        {
             id         : "QmexmDJEV6oTNDs1nyj6pVuV4NLwgwfaeCAyZ64a9RLJhh",
             type       : "image",
             nextId     : "QmXgZAUWd8yo4tvjBETqzUy3wLx5YRzuDwUQnBwRGrAmAo",
@@ -53,7 +45,7 @@ var dbCreate = function() {
             type       : "text",
             nextId     : "QmXWmucTKr86jNtRGNXgGAxjezwCkx2joumPiJ31RWtkY2",
             userId     : "",
-            extra      : "hello world",
+            extra      : "Hello World 101",
             date       : new Date("2018-03-16T08:10:00")
         },
         {
@@ -65,12 +57,12 @@ var dbCreate = function() {
             date       : new Date("2018-03-16T08:20:00")
         },
         {
-            id         : "QmYEDX8mxK7ApBkCq5mDnPRK5eXxSdC3S35ftdAr2yXdNm",
+            id         : "QmeYkQqgRGEZkySC1qzB9uAgccs4iVCrHoe5BxUD29FB37",
             type       : "text",
             nextId     : "",
             userId     : "",
-            extra      : "Brian test",
-            date       : new Date("2018-03-19T18:30:00")
+            extra      : "Hi Mom",
+            date       : new Date("2018-03-25T14:00:00")
         }
     ];
 

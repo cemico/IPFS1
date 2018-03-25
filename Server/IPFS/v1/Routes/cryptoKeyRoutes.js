@@ -136,13 +136,15 @@ var routes = function(CryptoKey, version, endPoint) {
                             type: req.body.type,
                             nextId: "",
                             userId: "",
-                            extra: "extra",
+                            extra: "(" + text + ")",
                             date: Date()
                         }
 
                         // new mongoose object
                         cryptoKey = new CryptoKey(json);
                         console.log(cryptoKey)
+
+                        // todo: replace with upsert to account for updates as well as inserts
 
                         // since this is a mongoose object from mongodb, to add object, only need to save object
                         cryptoKey.save(function(err, result) {

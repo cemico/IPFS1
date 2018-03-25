@@ -109,18 +109,50 @@ extension FilesViewController: AddItemProtocol {
         // validate
         guard !text.isEmpty else { return }
 
+        // validate not in list (temp until server todo is done to allow updates)
+        guard cryptoKeys.filter({ $0.extra == text }).first == nil else {
+
+            // todo: inform user duplicate
+            print("text already exists: '\(text)'")
+            return
+        }
+
         // request to add
         Network.postNewText(text: text) { [weak self] (model: CryptoKeyModel?) in
 
             guard let model = model else { return }
-
             print(model)
+            guard let strongSelf = self else { return }
+
+            // check if this item already exists
+            var isDup = false
+            NSLock().synchronized {
+
+                for (index, item) in strongSelf.cryptoKeys.enumerated() {
+
+                    if item.key == model.key {
+
+                        // found item - update
+                        isDup = true
+                        strongSelf.cryptoKeys[index] = model
+                        break
+                    }
+                }
+
+                // check if need to add
+                if !isDup {
+
+                    strongSelf.cryptoKeys.append(model)
+                }
+            }
+
+            // update display
+            Concurrency.mainAsync {
+
+                strongSelf.tableView.reloadData()
+            }
         }
 
-        // server: create and save new data model item (could be dup key)
-        //         (note: update server test data with this)
-
-        // client: reload table
         print(text)
     }
 
@@ -165,7 +197,7 @@ extension FilesViewController: UITableViewDataSource {
             let data = cryptoKeys[indexPath.row]
             cell.typeLabel.text = data.type
             cell.keyLabel.text = data.key
-            cell.extraLabel.text = data.extra
+            cell.extraLabel.text = "(\(data.extra))"
             cell.dateLabel.text = data.date
         }
 

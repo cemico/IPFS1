@@ -31,6 +31,7 @@ class AddItemViewController: UIViewController {
         super.viewDidLoad()
 
         updateSaveStatus()
+        textView.becomeFirstResponder()
     }
 
     ///////////////////////////////////////////////////////////

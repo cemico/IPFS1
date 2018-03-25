@@ -23,6 +23,7 @@ class FileViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var extraLabel: UILabel!
     @IBOutlet weak var bytesLabel: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
 
     ///////////////////////////////////////////////////////////
     // variables
@@ -132,6 +133,8 @@ class FileViewController: UIViewController {
         guard let model = model else { printInfo("No model set"); return }
 
         ipfsIsLoading = true
+        spinner.startAnimating()
+        spinner.isHidden = false
 
         // external
         let ipfsGateway = "147.135.130.181"
@@ -190,13 +193,17 @@ class FileViewController: UIViewController {
                     }
 
                     // show
+                    strongSelf.spinner.stopAnimating()
                     strongSelf.updateModel()
                 }
             })
         }
         catch {
 
-            printError("There was an error connecting: \(error)")
+            let msg = "\(error)"
+            ipfsText = msg
+            printError("There was an error connecting: \(msg)")
+            spinner.stopAnimating()
         }
     }
 }
