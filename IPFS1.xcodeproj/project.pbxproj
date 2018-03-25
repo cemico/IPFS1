@@ -43,7 +43,6 @@
 		AA2E76DA2056669100B4027F /* Bundle_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76D92056669100B4027F /* Bundle_Utils.swift */; };
 		AA2E76DE2056743F00B4027F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76DD2056743F00B4027F /* BaseViewController.swift */; };
 		AA2E76E02056750600B4027F /* LocalizeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2E76DF2056750600B4027F /* LocalizeProtocol.swift */; };
-		AA9133D6204E72DA006B5101 /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = AA9133D5204E72DA006B5101 /* ReadMe.md */; };
 		AA9133DB204E82F1006B5101 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9133DA204E82F1006B5101 /* Router.swift */; };
 		AAA32D792057BC0F00FC4CE6 /* CryptoKeyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA32D782057BC0F00FC4CE6 /* CryptoKeyModel.swift */; };
 		AAA32D7B205F01AE00FC4CE6 /* Date_Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA32D7A205F01AE00FC4CE6 /* Date_Utils.swift */; };
@@ -431,7 +430,6 @@
 				AAEDAD59204D394C0020611B /* Cartfile.resolved in Resources */,
 				AAEDA75C204D1EB40020611B /* LaunchScreen.storyboard in Resources */,
 				AAEDA757204D1EB40020611B /* Main.storyboard in Resources */,
-				AA9133D6204E72DA006B5101 /* ReadMe.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
