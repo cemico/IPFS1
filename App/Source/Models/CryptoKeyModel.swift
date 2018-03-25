@@ -27,12 +27,12 @@ class CryptoKeyModel: NSCoding, Codable, CustomStringConvertible, Equatable {
 
         // converted for readability
         case key            = "id"
-        case url            = "_self"
         case internalId     = "_id"
 
         // converted to wrap optionals
         case _error         = "error"
         case _version       = "version"
+        case _url           = "_self"
 
         // keys unchanged
         case type
@@ -108,7 +108,6 @@ class CryptoKeyModel: NSCoding, Codable, CustomStringConvertible, Equatable {
     var userId: String
     var extra: String
     var date: String
-    var url: String
     var internalId: String
 
     // optionals (note: private scope works with Codable protocol)
@@ -117,9 +116,17 @@ class CryptoKeyModel: NSCoding, Codable, CustomStringConvertible, Equatable {
     // synthesized / optional (note: private scope works with Codable protocol)
     private var _version: String?
 
+    // optional flag(s)
+    private var _url: String?
+
     ///////////////////////////////////////////////////////////
     // computed properties to wrap optionals
     ///////////////////////////////////////////////////////////
+
+    var url: String {
+
+        return _url ?? ""
+    }
 
     var error: String {
 
@@ -147,10 +154,10 @@ class CryptoKeyModel: NSCoding, Codable, CustomStringConvertible, Equatable {
         nextId      = aDecoder.decodeObject(forKey: ArchiveKeys.nextId.rawValue) as? String ?? ""
         userId      = aDecoder.decodeObject(forKey: ArchiveKeys.userId.rawValue) as? String ?? ""
         extra       = aDecoder.decodeObject(forKey: ArchiveKeys.extra.rawValue) as? String ?? ""
-        url         = aDecoder.decodeObject(forKey: ArchiveKeys.url.rawValue) as? String ?? ""
         internalId  = aDecoder.decodeObject(forKey: ArchiveKeys.internalId.rawValue) as? String ?? ""
         date        = aDecoder.decodeObject(forKey: ArchiveKeys.date.rawValue) as? String ?? ""
 
+        _url        = aDecoder.decodeObject(forKey: ArchiveKeys.url.rawValue) as? String ?? ""
         _error      = aDecoder.decodeObject(forKey: ArchiveKeys.error.rawValue) as? String ?? ""
         _version    = aDecoder.decodeObject(forKey: ArchiveKeys.version.rawValue) as? String ?? ""
 

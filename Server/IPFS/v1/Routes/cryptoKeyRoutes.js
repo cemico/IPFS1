@@ -40,36 +40,53 @@ var routes = function(CryptoKey, version, endPoint) {
                 }
                 else
                 {
-                    // return array of objects
-                    //res.json(cryptoKeys);
+                    //console.log("body SL: " + req.body.addSelfLink);
+                    //console.log("query SL: " + req.query.addSelfLink);
 
-                    // with the array of mongoose modeled class data objects, it'd be nice to
-                    // inject in a self referencing link, so user could get to any single
-                    // item directly.  since this is a modeled class, we have to create
-                    // a new json and add the self link into it, then return that array
-                    // note: called HATEOS or Hypermedia as the Engine of Application State
-                    var returnCryptoKeys = [];
-                    cryptoKeys.forEach(function(element, index, array) {
+                    // check from body: exist and set true
+                    var addSelfLink = (req.body.addSelfLink && req.body.addSelfLink == 1 ? true : false);
 
-                        // convert model object class to raw json
-                        var newObject = element.toJSON();
+                    // alternatively direct on query string
+                    if (!addSelfLink) {
 
-                        // add links key
-                        //newObject.links = {};
+                        addSelfLink = (req.query.addSelfLink && req.query.addSelfLink == 1 ? true : false)
+                    }
 
-                        // setup self link
-                        var link = 'http://' + req.headers.host + '/api/' + version + '/' + endPoint + '/' + newObject._id;
-                        console.log("Self Link: " + link);
-                        //newObject.links.self = link;
-                        newObject._self = link;
+                    if (!addSelfLink) {
 
-                        // add to array
-                        returnCryptoKeys.push(newObject);
-                    });
+                        // return array of objects
+                        res.json(cryptoKeys);
+                    }
+                    else {
 
-                    // return new array instead
-                    res.json(returnCryptoKeys);
-                }
+                        // with the array of mongoose modeled class data objects, it'd be nice to
+                        // inject in a self referencing link, so user could get to any single
+                        // item directly.  since this is a modeled class, we have to create
+                        // a new json and add the self link into it, then return that array
+                        // note: called HATEOS or Hypermedia as the Engine of Application State
+                        var returnCryptoKeys = [];
+                        cryptoKeys.forEach(function(element, index, array) {
+
+                            // convert model object class to raw json
+                            var newObject = element.toJSON();
+
+                            // add links key
+                            //newObject.links = {};
+
+                            // setup self link
+                            var link = 'http://' + req.headers.host + '/api/' + version + '/' + endPoint + '/' + newObject._id;
+                            console.log("Self Link: " + link);
+                            //newObject.links.self = link;
+                            newObject._self = link;
+
+                            // add to array
+                            returnCryptoKeys.push(newObject);
+                        });
+
+                        // return new array instead
+                        res.json(returnCryptoKeys);
+                    }
+                 }
             });
         })
         .post(function(req, res) {
@@ -79,12 +96,12 @@ var routes = function(CryptoKey, version, endPoint) {
             // create a new object to add to database
             var isDirectInsert = req.body.isDirectInsert;
             var cryptoKey;
-            console.log("isDirect: ", isDirectInsert)
+            console.log("isDirect: ", isDirectInsert);
 
             if (isDirectInsert) {
 
                 // all fields specified in body with isDirectInsert = 1
-                console.log(("direct insert"))
+                console.log(("direct insert"));
                 cryptoKey = new CryptoKey(req.body);
                 console.log(cryptoKey)
             }
@@ -124,12 +141,13 @@ var routes = function(CryptoKey, version, endPoint) {
                         }
 
                         // new mongoose object
-                        cryptoKey = new CryptoKey(json)
+                        cryptoKey = new CryptoKey(json);
                         console.log(cryptoKey)
 
                         // since this is a mongoose object from mongodb, to add object, only need to save object
-                        cryptoKey.save(function(err) {
+                        cryptoKey.save(function(err, result) {
 
+                            let newObj = CryptoKey(result);
                             if (err)
                             {
                                 console.log(err);
@@ -138,8 +156,8 @@ var routes = function(CryptoKey, version, endPoint) {
                             else
                             {
                                 // complete
-                                console.log("Successfully created key.");
-                                res.status(201).send(cryptoKey);
+                                console.log("Successfully created key. ", newObj);
+                                res.status(201).send(newObj);
                             }
                         });
                     }

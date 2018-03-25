@@ -5,26 +5,26 @@ var express = require('express');           // web server
 var bodyParser = require('body-parser');    // parse out incoming data for non-GETs
 
 // api root access
-var apiPath = "/api"
-var version1 = "v1"
-var localPath = "."
-var version1Path = "/" + version1
-var currentVersion = version1
-var currentVersionPath = version1Path
+var apiPath = "/api";
+var version1 = "v1";
+var localPath = ".";
+var version1Path = "/" + version1;
+var currentVersion = version1;
+var currentVersionPath = version1Path;
 
 // datasource
-var dataSourcePath = "/" + "DataSources"
-var mongoDBPath = "/" + "MongoDB"
-var mockDBPath = "/" + "MockDB"
-var currentDBPath = mongoDBPath
-var dataSource = localPath + currentVersionPath + dataSourcePath +  currentDBPath
-var data = require(dataSource)
+var dataSourcePath = "/" + "DataSources";
+var mongoDBPath = "/" + "MongoDB";
+var mockDBPath = "/" + "MockDB";
+var currentDBPath = mongoDBPath;
+var dataSource = localPath + currentVersionPath + dataSourcePath +  currentDBPath;
+var data = require(dataSource);
 
 // web server instance
 var app = express();
 
 // define which port to listen on
-var port = process.env.PORT || 8005
+var port = process.env.PORT || 8005;
 
 // load body parser pieces we use
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -50,10 +50,20 @@ app.get('/', function(req, res) {
                 "<img src='https://wallscover.com/images/green-lantern-corps-10.jpg' width='640' height='320'><br /><br />" +
                 "<i>Supported Paths</i><ul>";
 
+    // top-level flag for inclusions of self-links
+    var addSelfLink = true;
+    var queryStringPath = "";
+
+    if (addSelfLink) {
+
+        queryStringPath = "?addSelfLink=1";
+    }
+
     rootPaths.forEach(function(element, index, array) {
 
-        var sLink = "<a href='http://" + req.headers.host + app.mountpath + element.path+ "'>" + element.path + "</a>";
+        var sLink = "<a href='http://" + req.headers.host + app.mountpath + element.path + queryStringPath + "'>" + element.path + "</a>";
         console.log(sLink);
+
         sHTML += "<li>" + sLink + " - " + element.description + "</li>";
     });
 
@@ -78,11 +88,19 @@ var apiVersions = [
 app.get(apiPath, function(req, res) {
 
     var sHTML = "<b>API History</b><br /><ul>";
+    var addSelfLink = (req.query.addSelfLink && req.query.addSelfLink == 1 ? true : false);
+    var queryStringPath = "";
+
+    if (addSelfLink) {
+
+        queryStringPath = "?addSelfLink=1";
+    }
 
     apiVersions.forEach(function(element, index, array) {
 
-        var sLink = "<a href='http://" + req.headers.host + apiPath + "/" + element.path+ "'>" + element.path + "</a>";
+        var sLink = "<a href='http://" + req.headers.host + apiPath + "/" + element.path + queryStringPath + "'>" + element.path + "</a>";
         console.log(sLink);
+
         sHTML += "<li>" + sLink + " - " + element.description + "</li>";
     });
 
@@ -93,9 +111,9 @@ app.get(apiPath, function(req, res) {
 });
 
 // endpoints
-var v1CryptoKeyEndpoint = "cryptokeys"
-var v1CryptoKeyEndpointsPath = "/" + v1CryptoKeyEndpoint
-var itemPath = "/:Id"
+var v1CryptoKeyEndpoint = "cryptokeys";
+var v1CryptoKeyEndpointsPath = "/" + v1CryptoKeyEndpoint;
+var itemPath = "/:Id";
 
 // api v1 access - good for easy routes, otherwise Router class manages better
 var v1RestHelp = [
@@ -123,42 +141,51 @@ var v1RestHelp = [
 // v1 route
 app.get(apiPath + version1Path, function(req, res) {
 
-    //// simple return
-    //res.type('text/json');
-    //res.json(v1RestHelp);
+    var addSelfLink = (req.query.addSelfLink && req.query.addSelfLink == 1 ? true : false)
 
-    var returnHelp = [];
-    v1RestHelp.forEach(function(element, index, array) {
+    if (!addSelfLink) {
 
-        // convert model object class to raw json
-        var newObject = element;
+        // simple return
+        res.type('text/json');
+        res.json(v1RestHelp);
+    }
+    else {
 
-        // simple link on the get all to provide self link to show all
-        if (element.description.indexOf('Get all') > -1) {
+        var queryStringPath = "?addSelfLink=1";
 
-            // setup self link
-            var link = 'http://' + req.headers.host + element.path;
-            console.log("Self Link: " + link);
-            element._self = link;
-        }
+        var returnHelp = [];
+        v1RestHelp.forEach(function(element, index, array) {
 
-        // add to array
-        returnHelp.push(element);
-    });
+            // convert model object class to raw json
+            var newObject = element;
 
-    // return new array instead
-    res.json(returnHelp);
+            // simple link on the get all to provide self link to show all
+            if (element.description.indexOf('Get all') > -1) {
+
+                // setup self link
+                var link = 'http://' + req.headers.host + element.path + queryStringPath;
+                console.log("Self Link: " + link);
+                element._self = link;
+            }
+
+            // add to array
+            returnHelp.push(element);
+        });
+
+        // return new array instead
+        res.json(returnHelp);
+    }
 });
 
 // setup models for type conversions
-var modelsPath = "/Models"
-var cryptoKeyModelPath = "/cryptoKeyModel"
+var modelsPath = "/Models";
+var cryptoKeyModelPath = "/cryptoKeyModel";
 var v1CryptoKey = require(localPath + version1Path + modelsPath + cryptoKeyModelPath);
 
 // create router reference (since declared as function, need the parens to execute it)
 // also injects the model into the router
-var routesPath = "/Routes"
-var cryptoKeyRoutesPath = "/cryptoKeyRoutes"
+var routesPath = "/Routes";
+var cryptoKeyRoutesPath = "/cryptoKeyRoutes";
 var v1CryptoKeyRouter = require(localPath + version1Path + routesPath + cryptoKeyRoutesPath)(v1CryptoKey, version1, v1CryptoKeyEndpoint);
 
 // load current routes
