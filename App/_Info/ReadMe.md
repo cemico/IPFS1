@@ -9,3 +9,7 @@ Update Carthage Dependencies
   > carthage update --use-submodules
   > (works also to refetch before update) carthage update --platform iOS
 
+
+Note: Web view into database
+  > http://67.159.151.70:8005/api?addSelfLink=1
+
