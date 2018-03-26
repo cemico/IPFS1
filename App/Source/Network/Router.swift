@@ -82,7 +82,7 @@ extension Router {
             static let currentVersion           = Api.v1
 
             // pulling it all together
-#if APP_SCHEME_DEV
+//#if APP_SCHEME_DEV
 
             // http://localhost:8005/api/v1/
             // (1) https://api.dev.cemico.com
@@ -91,20 +91,20 @@ extension Router {
             static let currentBase              = Api.httpScheme                         + Api.currentHost
             static let currentRtcBase           = Api.currentBase
 
-#elseif APP_SCHEME_INT
-
-            // https://api.int.cemico.com
-            static let currentHost              = Api.intHost
-            static let currentBase              = Api.httpsScheme + Api.apiCName          + Api.currentHost
-            static let currentRtcBase           = Api.httpsScheme + Api.currentRtc        + Api.currentHost + Api.currentVersion
-
-#else // APP_SCHEME_PROD
-
-            // https://api.cemico.com
-            static let currentHost              = Api.prodHost
-            static let currentBase              = Api.httpsScheme + Api.currentApi        + Api.currentHost + Api.currentVersion
-            static let currentRtcBase           = Api.httpsScheme + Api.currentRtc        + Api.currentHost + Api.currentVersion
-#endif
+//#elseif APP_SCHEME_INT
+//
+//            // https://api.int.cemico.com
+//            static let currentHost              = Api.intHost
+//            static let currentBase              = Api.httpsScheme + Api.apiCName          + Api.currentHost
+//            static let currentRtcBase           = Api.httpsScheme + Api.currentRtc        + Api.currentHost + Api.currentVersion
+//
+//#else // APP_SCHEME_PROD
+//
+//            // https://api.cemico.com
+//            static let currentHost              = Api.prodHost
+//            static let currentBase              = Api.httpsScheme + Api.currentApi        + Api.currentHost + Api.currentVersion
+//            static let currentRtcBase           = Api.httpsScheme + Api.currentRtc        + Api.currentHost + Api.currentVersion
+//#endif
         }
 
         struct Endpoints {

@@ -142,6 +142,7 @@ extension FilesViewController: AddItemProtocol {
                 // check if need to add
                 if !isDup {
 
+                    DataCache.addKey(model)
                     strongSelf.cryptoKeys.append(model)
                 }
             }

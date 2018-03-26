@@ -136,7 +136,7 @@ var routes = function(CryptoKey, version, endPoint) {
                             type: req.body.type,
                             nextId: "",
                             userId: "",
-                            extra: "(" + text + ")",
+                            extra: text,
                             date: Date()
                         }
 

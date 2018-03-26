@@ -45,6 +45,14 @@ class DataController {
         return _cryptoKeys
     }
 
+    func addKey(_ key: CryptoKeyModel) {
+
+        NSLock().synchronized {
+
+            self._cryptoKeys.append(key)
+        }
+    }
+
     func updateCryptoKeys() {
         
         Network.getCryptoKeys { [weak self] (keys: CryptoKeysModel?) in
