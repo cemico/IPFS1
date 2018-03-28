@@ -138,28 +138,59 @@ var routes = function(CryptoKey, version, endPoint) {
                             userId: "",
                             extra: text,
                             date: Date()
-                        }
+                        };
 
                         // new mongoose object
                         cryptoKey = new CryptoKey(json);
                         console.log(cryptoKey)
 
-                        // todo: replace with upsert to account for updates as well as inserts
+                        // update or insert
+                        CryptoKey.findOne({extra: "Hi Mom"}, function(err, model) {
 
-                        // since this is a mongoose object from mongodb, to add object, only need to save object
-                        cryptoKey.save(function(err, result) {
+                            if (err) {
 
-                            let newObj = CryptoKey(result);
-                            if (err)
-                            {
-                                console.log(err);
-                                res.status(500).send(err);
+                                // doesn't exist - instert
+                                console.log("Insert: " + text);
+
+                                // since this is a mongoose object from mongodb, to add object, only need to save object
+                                cryptoKey.save(function(err, result) {
+
+                                    let newObj = CryptoKey(result);
+                                    if (err)
+                                    {
+                                        console.log(err);
+                                        res.status(500).send(err);
+                                    }
+                                    else
+                                    {
+                                        // complete
+                                        console.log("Successfully created key. ", newObj);
+                                        res.status(201).send(newObj);
+                                    }
+                                });
                             }
-                            else
-                            {
-                                // complete
-                                console.log("Successfully created key. ", newObj);
-                                res.status(201).send(newObj);
+                            else {
+
+                                // exists - update
+                                console.log("Update: " + text);
+
+                                // update
+                                model.date = Date()
+                                model.save(function(err, result) {
+
+                                    //let newObj = CryptoKey(result);
+                                    if (err)
+                                    {
+                                        console.log(err);
+                                        res.status(500).send(err);
+                                    }
+                                    else
+                                    {
+                                        // complete
+                                        console.log("Successfully updated key. ", model);
+                                        res.status(201).send(model);
+                                    }
+                                });
                             }
                         });
                     }

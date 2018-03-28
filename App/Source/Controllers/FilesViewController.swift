@@ -109,15 +109,7 @@ extension FilesViewController: AddItemProtocol {
         // validate
         guard !text.isEmpty else { return }
 
-        // validate not in list (temp until server todo is done to allow updates)
-        guard cryptoKeys.filter({ $0.extra == text }).first == nil else {
-
-            // todo: inform user duplicate
-            print("text already exists: '\(text)'")
-            return
-        }
-
-        // request to add
+        // request to add or update timestamp
         Network.postNewText(text: text) { [weak self] (model: CryptoKeyModel?) in
 
             guard let model = model else { return }
