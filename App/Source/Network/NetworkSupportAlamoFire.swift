@@ -46,8 +46,8 @@ class NetworkSupportAlamoFire: NetworkSupport {
             // extract results
             let data = response.data
             let error = response.result.error
-            let json = response.result.value as? Attributes
-            print(json)
+//            let json = response.result.value as? Attributes
+//            print(json)
 
             // use common handler
             strongSelf.handlePostNewTextResults(data: data, error: error, json: nil, resultsCompletionHandler: { (model: CryptoKeyModel?) in
