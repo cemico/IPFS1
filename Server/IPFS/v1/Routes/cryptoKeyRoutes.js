@@ -145,9 +145,10 @@ var routes = function(CryptoKey, version, endPoint) {
                         console.log(cryptoKey)
 
                         // update or insert
-                        CryptoKey.findOne({extra: "Hi Mom"}, function(err, model) {
+                        CryptoKey.findOne({extra: text}, function(err, model) {
 
-                            if (err) {
+                            console.log("find: err:", err, " model: ", model);
+                            if (!model && !err) {
 
                                 // doesn't exist - instert
                                 console.log("Insert: " + text);
@@ -169,7 +170,7 @@ var routes = function(CryptoKey, version, endPoint) {
                                     }
                                 });
                             }
-                            else {
+                            else if (model) {
 
                                 // exists - update
                                 console.log("Update: " + text);
@@ -191,6 +192,16 @@ var routes = function(CryptoKey, version, endPoint) {
                                         res.status(201).send(model);
                                     }
                                 });
+                            }
+                            else if (err) {
+
+                                console.log("Save Failure, returning err")
+                                res.status(500).send(err);
+                            }
+                            else {
+
+                                console.log("Save Unknown Failure, returning nil")
+                                res.status(500).send();
                             }
                         });
                     }
