@@ -11,7 +11,7 @@ import SwiftIpfsApi
 import SwiftMultihash
 import MessageUI
 
-class FileViewController: UIViewController {
+class FileViewController: UIViewController, MFMessageComposeViewControllerDelegate {
 
     ///////////////////////////////////////////////////////////
     // outlets
@@ -96,6 +96,30 @@ class FileViewController: UIViewController {
         self.present(messageVC, animated: true, completion: nil)
 
         print("share")
+    }
+
+    ///////////////////////////////////////////////////////////
+    // message delegate
+    ///////////////////////////////////////////////////////////
+
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+
+        switch result.rawValue {
+
+            case MessageComposeResult.cancelled.rawValue:
+                print("Message was cancelled")
+
+            case MessageComposeResult.failed.rawValue:
+                print("Message failed")
+
+            case MessageComposeResult.sent.rawValue:
+                print("Message was sent")
+
+            default:
+                break
+        }
+
+        controller.dismiss(animated: true, completion: nil)
     }
 
     ///////////////////////////////////////////////////////////
